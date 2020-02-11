@@ -8,8 +8,23 @@ ApplicationWindow {
     height: 480
     title: qsTr("Demo QtDay 2020")
 
+    Component {
+        id: page1
+
+        WizardPage1 {
+            onNextPageRequested: stackView.push(page2)
+        }
+    }
+
+    Component {
+        id: page2
+
+        WizardPage2 {}
+    }
+
     StackView {
         id: stackView
+        initialItem: page1
         anchors.fill: parent
     }
 }

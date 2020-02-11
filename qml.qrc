@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>WizardPage1.qml</file>
+        <file>DemoButton.qml</file>
+        <file>WizardPage2.qml</file>
     </qresource>
 </RCC>
