@@ -18,6 +18,7 @@ Page {
         width: 400
         height: 100
         font.pixelSize: 24
+        horizontalAlignment: Qt.AlignHCenter
         wrapMode: Text.Wrap
         anchors.top: parent.top
         anchors.topMargin: 163

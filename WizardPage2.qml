@@ -6,11 +6,6 @@ Page {
 
     signal nextPageRequested
 
-    Rectangle {
-        anchors.fill: parent
-        color: "black"
-    }
-
     DemoButton {
         anchors.top: parent.top
         anchors.topMargin: 360
