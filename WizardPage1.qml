@@ -6,33 +6,27 @@ Page {
 
     signal nextPageRequested
 
-    Text {
-        font.pixelSize: 16
+    DTextThin {
+        text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
         anchors.top: parent.top
         anchors.topMargin: 40
         anchors.horizontalCenter: parent.horizontalCenter
-        text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
     }
 
-    Text {
-        width: 400
+    DText {
+        text: qsTr("exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat")
+        width: 356
         height: 100
-        font.pixelSize: 24
-        horizontalAlignment: Qt.AlignHCenter
-        wrapMode: Text.Wrap
         anchors.top: parent.top
         anchors.topMargin: 163
         anchors.horizontalCenter: parent.horizontalCenter
-        text: qsTr("exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat")
     }
 
-    DemoButton {
+    DButton {
         anchors.top: parent.top
         anchors.topMargin: 360
         anchors.horizontalCenter: parent.horizontalCenter
-        text: qsTr("START")
-        width: 290
-        height: 50
+        source: "assets/start-button.png"
 
         onClicked: root.nextPageRequested()
     }

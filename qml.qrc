@@ -3,7 +3,12 @@
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>WizardPage1.qml</file>
-        <file>DemoButton.qml</file>
+        <file>DButton.qml</file>
         <file>WizardPage2.qml</file>
+        <file>assets/fonts/medium.otf</file>
+        <file>assets/fonts/thin.otf</file>
+        <file>assets/start-button.png</file>
+        <file>DTextThin.qml</file>
+        <file>DText.qml</file>
     </qresource>
 </RCC>

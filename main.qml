@@ -8,6 +8,16 @@ ApplicationWindow {
     height: 480
     title: qsTr("Demo QtDay 2020")
 
+    FontLoader {
+        id: mediumFont
+        source: "assets/fonts/medium.otf"
+    }
+
+    FontLoader {
+        id: thinFont
+        source: "assets/fonts/thin.otf"
+    }
+
     Component {
         id: page1
 
