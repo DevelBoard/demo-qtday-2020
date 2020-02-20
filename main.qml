@@ -20,7 +20,6 @@ ApplicationWindow {
 
     Component {
         id: page1
-
         WizardPage1 {
             onNextPageRequested: stackView.push(page2)
         }
@@ -28,8 +27,21 @@ ApplicationWindow {
 
     Component {
         id: page2
+        WizardPage2 {
+            onNextPageRequested: stackView.push(page3)
+        }
+    }
 
-        WizardPage2 {}
+    Component {
+        id: page3
+        WizardPage3 {
+            onNextPageRequested: stackView.push(page4)
+        }
+    }
+
+    Component {
+        id: page4
+        WizardPage4 {}
     }
 
     StackView {

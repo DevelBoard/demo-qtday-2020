@@ -15,7 +15,7 @@ Page {
     }
 
     DText {
-        text: qsTr("Your ideal capital city you would live in?")
+        text: qsTr("What do you do in your free time?")
         width: 356
         height: 100
         anchors.top: parent.top

@@ -10,5 +10,7 @@
         <file>assets/start-button.png</file>
         <file>DTextThin.qml</file>
         <file>DText.qml</file>
+        <file>WizardPage3.qml</file>
+        <file>WizardPage4.qml</file>
     </qresource>
 </RCC>

@@ -7,18 +7,27 @@ Page {
     signal nextPageRequested
 
     DTextThin {
-        text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
+        text: "QT MUSIC FOR YOUR DAILY PATHS"
         anchors.top: parent.top
         anchors.topMargin: 40
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
     DText {
-        text: qsTr("exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat")
+        text: "Cities, sports and urban activity!"
         width: 356
         height: 100
         anchors.top: parent.top
-        anchors.topMargin: 163
+        anchors.topMargin: 133
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    DText {
+        text: "Describe yourself and get your own Qt sound!"
+        width: 500
+        height: 100
+        anchors.top: parent.top
+        anchors.topMargin: 193
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
