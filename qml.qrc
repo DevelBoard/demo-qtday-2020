@@ -12,5 +12,7 @@
         <file>DText.qml</file>
         <file>WizardPage3.qml</file>
         <file>WizardPage4.qml</file>
+        <file>WizardPage5.qml</file>
+        <file>WizardPage6.qml</file>
     </qresource>
 </RCC>
