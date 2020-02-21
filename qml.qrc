@@ -14,5 +14,9 @@
         <file>WizardPage4.qml</file>
         <file>WizardPage5.qml</file>
         <file>WizardPage6.qml</file>
+        <file>CityIcon.qml</file>
+        <file>assets/background.png</file>
+        <file>assets/cities/ic_agra.png</file>
+        <file>assets/cities/ic_agra-disable.png</file>
     </qresource>
 </RCC>
