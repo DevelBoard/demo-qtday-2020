@@ -18,5 +18,23 @@
         <file>assets/background.png</file>
         <file>assets/cities/ic_agra.png</file>
         <file>assets/cities/ic_agra-disable.png</file>
+        <file>assets/cities/ic_barcellona.png</file>
+        <file>assets/cities/ic_barcellona-disable.png</file>
+        <file>assets/cities/ic_beijing.png</file>
+        <file>assets/cities/ic_beijing-disable.png</file>
+        <file>assets/cities/ic_london.png</file>
+        <file>assets/cities/ic_london-disable.png</file>
+        <file>assets/cities/ic_moscow.png</file>
+        <file>assets/cities/ic_moscow-disable.png</file>
+        <file>assets/cities/ic_new-york.png</file>
+        <file>assets/cities/ic_new-york-disable.png</file>
+        <file>assets/cities/ic_paris.png</file>
+        <file>assets/cities/ic_paris-disable.png</file>
+        <file>assets/cities/ic_rome.png</file>
+        <file>assets/cities/ic_rome-disable.png</file>
+        <file>assets/cities/ic_san-paolo.png</file>
+        <file>assets/cities/ic_san-paolo-disable.png</file>
+        <file>assets/cities/ic_sidney.png</file>
+        <file>assets/cities/ic_sidney-disable.png</file>
     </qresource>
 </RCC>
