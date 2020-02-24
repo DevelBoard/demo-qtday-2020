@@ -36,10 +36,18 @@ Page {
         // ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
 
         ListView {
+            id: cityList
+
             anchors.centerIn: cityScrollView
 
             orientation: Qt.Horizontal
+
             highlightFollowsCurrentItem: true
+            preferredHighlightBegin: 300
+            preferredHighlightEnd: 300
+            highlightRangeMode: ListView.StrictlyEnforceRange
+
+            Component.onCompleted: currentIndex = 5
 
             model: ListModel {
                 ListElement {
@@ -96,6 +104,7 @@ Page {
             delegate: CityIcon {
                 cityEnabled: enabledImg
                 cityDisabled: disabledImg
+                onClicked: cityList.currentIndex = index
             }
         }
     }
