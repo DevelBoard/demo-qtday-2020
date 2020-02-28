@@ -22,90 +22,92 @@ Page {
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
-    ScrollView {
-        id: cityScrollView
+    ListView {
+        id: cityList
 
+        // anchors.centerIn: cityScrollView
         anchors.top: parent.top
         anchors.topMargin: 100
         anchors.left: parent.left
         anchors.right: parent.right
         height: 240
 
-        contentWidth: 180 * 4
+        orientation: Qt.Horizontal
 
-        // ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+        Component {
+            id: highlightBar
+            Rectangle {
+                width: 200; height: 50
+                color: "#FFFF88"
+                y: listView.currentItem.y;
+                Behavior on y { SpringAnimation { spring: 2; damping: 0.1 } }
+            }
+        }
 
-        ListView {
-            id: cityList
+        // highlight: highlightBar
+        highlightFollowsCurrentItem: true
+        preferredHighlightBegin: 300
+        preferredHighlightEnd: 300
+        highlightRangeMode: ListView.StrictlyEnforceRange
 
-            anchors.centerIn: cityScrollView
+        Component.onCompleted: currentIndex = 5
 
-            orientation: Qt.Horizontal
-
-            highlightFollowsCurrentItem: true
-            preferredHighlightBegin: 300
-            preferredHighlightEnd: 300
-            highlightRangeMode: ListView.StrictlyEnforceRange
-
-            Component.onCompleted: currentIndex = 5
-
-            model: ListModel {
-                ListElement {
-                    enabledImg: "assets/cities/ic_rome.png"
-                    disabledImg: "assets/cities/ic_rome-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_london.png"
-                    disabledImg: "assets/cities/ic_london-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_sidney.png"
-                    disabledImg: "assets/cities/ic_sidney-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_agra.png"
-                    disabledImg: "assets/cities/ic_agra-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_new-york.png"
-                    disabledImg: "assets/cities/ic_new-york-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_paris.png"
-                    disabledImg: "assets/cities/ic_paris-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_beijing.png"
-                    disabledImg: "assets/cities/ic_beijing-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_san-paolo.png"
-                    disabledImg: "assets/cities/ic_san-paolo-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_barcellona.png"
-                    disabledImg: "assets/cities/ic_barcellona-disable.png"
-                }
-
-                ListElement {
-                    enabledImg: "assets/cities/ic_moscow.png"
-                    disabledImg: "assets/cities/ic_moscow-disable.png"
-                }
+        model: ListModel {
+            ListElement {
+                enabledImg: "assets/cities/ic_rome.png"
+                disabledImg: "assets/cities/ic_rome-disable.png"
             }
 
-            delegate: CityIcon {
-                cityEnabled: enabledImg
-                cityDisabled: disabledImg
-                onClicked: cityList.currentIndex = index
+            ListElement {
+                enabledImg: "assets/cities/ic_london.png"
+                disabledImg: "assets/cities/ic_london-disable.png"
             }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_sidney.png"
+                disabledImg: "assets/cities/ic_sidney-disable.png"
+            }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_agra.png"
+                disabledImg: "assets/cities/ic_agra-disable.png"
+            }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_new-york.png"
+                disabledImg: "assets/cities/ic_new-york-disable.png"
+            }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_paris.png"
+                disabledImg: "assets/cities/ic_paris-disable.png"
+            }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_beijing.png"
+                disabledImg: "assets/cities/ic_beijing-disable.png"
+            }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_san-paolo.png"
+                disabledImg: "assets/cities/ic_san-paolo-disable.png"
+            }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_barcellona.png"
+                disabledImg: "assets/cities/ic_barcellona-disable.png"
+            }
+
+            ListElement {
+                enabledImg: "assets/cities/ic_moscow.png"
+                disabledImg: "assets/cities/ic_moscow-disable.png"
+            }
+        }
+
+        delegate: CityIcon {
+            cityEnabled: enabledImg
+            cityDisabled: disabledImg
+            onClicked: cityList.currentIndex = index
         }
     }
 
