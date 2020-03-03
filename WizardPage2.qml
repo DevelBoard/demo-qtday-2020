@@ -1,24 +1,10 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-DPage {
+DPageSubTitled {
     id: root
 
-    DTextThin {
-        text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
-        anchors.top: parent.top
-        anchors.topMargin: 20
-        anchors.horizontalCenter: parent.horizontalCenter
-    }
-
-    DText {
-        text: qsTr("Your ideal capital city you would live in?")
-        width: 500
-        height: 40
-        anchors.top: parent.top
-        anchors.topMargin: 40
-        anchors.horizontalCenter: parent.horizontalCenter
-    }
+    text: qsTr("Your ideal capital city you would live in?");
 
     ListView {
         id: cityList
