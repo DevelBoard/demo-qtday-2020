@@ -37,60 +37,20 @@ DPageSubTitled {
         Component.onCompleted: currentIndex = 5
 
         model: ListModel {
-            ListElement {
-                enabledImg: "assets/cities/ic_rome.png"
-                disabledImg: "assets/cities/ic_rome-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_london.png"
-                disabledImg: "assets/cities/ic_london-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_sidney.png"
-                disabledImg: "assets/cities/ic_sidney-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_agra.png"
-                disabledImg: "assets/cities/ic_agra-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_new-york.png"
-                disabledImg: "assets/cities/ic_new-york-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_paris.png"
-                disabledImg: "assets/cities/ic_paris-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_beijing.png"
-                disabledImg: "assets/cities/ic_beijing-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_san-paolo.png"
-                disabledImg: "assets/cities/ic_san-paolo-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_barcellona.png"
-                disabledImg: "assets/cities/ic_barcellona-disable.png"
-            }
-
-            ListElement {
-                enabledImg: "assets/cities/ic_moscow.png"
-                disabledImg: "assets/cities/ic_moscow-disable.png"
-            }
+            ListElement { baseSource: "assets/cities/ic_rome" }
+            ListElement { baseSource: "assets/cities/ic_london" }
+            ListElement { baseSource: "assets/cities/ic_sidney" }
+            ListElement { baseSource: "assets/cities/ic_agra" }
+            ListElement { baseSource: "assets/cities/ic_new-york" }
+            ListElement { baseSource: "assets/cities/ic_paris" }
+            ListElement { baseSource: "assets/cities/ic_beijing" }
+            ListElement { baseSource: "assets/cities/ic_san-paolo" }
+            ListElement { baseSource: "assets/cities/ic_barcellona" }
+            ListElement { baseSource: "assets/cities/ic_moscow" }
         }
 
         delegate: CityIcon {
-            cityEnabled: enabledImg
-            cityDisabled: disabledImg
+            source: baseSource + (ListView.isCurrentItem ? ".png" : "-disable.png")
             onClicked: cityList.currentIndex = index
         }
     }
