@@ -10,7 +10,7 @@
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>StartPage.qml</file>
-        <file>WizardPage1.qml</file>
+        <file>DescribeYourselfPage.qml</file>
         <file>WizardPage2.qml</file>
         <file>WizardPage3.qml</file>
         <file>WizardPage4.qml</file>

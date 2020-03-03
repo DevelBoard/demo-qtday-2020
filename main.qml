@@ -29,7 +29,8 @@ ApplicationWindow {
         NamePage { id: namePage; textStep_1: rolePage.selection; }
         MailPage { id: mailPage; textStep_1: rolePage.selection; textStep_2: namePage.name; }
         LoadPage { id: loadPage; textStep_1: rolePage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
-        WizardPage1 {}
+
+        DescribeYourselfPage {}
         WizardPage2 {}
         WizardPage3 {}
         WizardPage4 {}
