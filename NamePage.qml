@@ -9,6 +9,8 @@ DPageStep {
 
     property alias name: nameTextField.text
 
+    onVisibleChanged: { if (!visible) nameTextField.focus = false; }
+
     DTextField {
         id: nameTextField
         width: 480
