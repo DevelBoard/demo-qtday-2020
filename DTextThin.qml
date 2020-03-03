@@ -1,8 +1,10 @@
 import QtQuick 2.12
 
-DText {
+Text {
     font.family: thinFont.name
     font.pixelSize: 16
     font.weight: Font.Light
-    font.letterSpacing: 5.76
+    horizontalAlignment: Qt.AlignHCenter
+    wrapMode: Text.Wrap
+    color: "#D6E2F0"
 }

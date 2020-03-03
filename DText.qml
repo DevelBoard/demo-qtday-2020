@@ -4,7 +4,6 @@ Text {
     font.pixelSize: 24
     font.family: mediumFont.name
     horizontalAlignment: Qt.AlignHCenter
-    verticalAlignment: Qt.AlignVCenter
     wrapMode: Text.Wrap
-    color: "#696969"
+    color: "#D6E2F0"
 }
