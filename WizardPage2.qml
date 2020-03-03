@@ -16,16 +16,6 @@ DPageSubTitled {
 
         orientation: Qt.Horizontal
 
-        Component {
-            id: highlightBar
-            Rectangle {
-                width: 200; height: 50
-                color: "#FFFF88"
-                y: listView.currentItem.y;
-                Behavior on y { SpringAnimation { spring: 2; damping: 0.1 } }
-            }
-        }
-
         highlightFollowsCurrentItem: true
         preferredHighlightBegin: 300
         preferredHighlightEnd: 300
