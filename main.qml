@@ -7,6 +7,7 @@ ApplicationWindow {
     width: 800
     height: 480
     title: qsTr("Demo QtDay 2020")
+    background: Image { source: "assets/develboard_bg-1.png" }
 
     FontLoader {
         id: mediumFont
