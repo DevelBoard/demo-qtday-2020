@@ -77,5 +77,13 @@
         <file>assets/ic_back.png</file>
         <file>assets/ic_step-2-active.png</file>
         <file>assets/comp_clock.png</file>
+        <file>RolePage.qml</file>
+        <file>DPageStep.qml</file>
+        <file>RoleDelegate.qml</file>
+        <file>MailPage.qml</file>
+        <file>NamePage.qml</file>
+        <file>DLine.qml</file>
+        <file>DTextField.qml</file>
+        <file>LoadPage.qml</file>
     </qresource>
 </RCC>
