@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtQuick.Layouts 1.12
 
 ApplicationWindow {
     id: window
@@ -13,62 +14,37 @@ ApplicationWindow {
         id: mediumFont
         source: "assets/fonts/medium.otf"
     }
-
     FontLoader {
         id: thinFont
         source: "assets/fonts/thin.otf"
     }
 
-    Component {
-        id: startPage
-        StartPage { onNextPageRequested: stackView.push(page1) }
-    }
-
-    Component {
-        id: page1
-        WizardPage1 {
-            onNextPageRequested: stackView.push(page2)
-        }
-    }
-
-    Component {
-        id: page2
-        WizardPage2 {
-            onNextPageRequested: stackView.push(page3)
-        }
-    }
-
-    Component {
-        id: page3
-        WizardPage3 {
-            onNextPageRequested: stackView.push(page4)
-        }
-    }
-
-    Component {
-        id: page4
-        WizardPage4 {
-            onNextPageRequested: stackView.push(page5)
-        }
-    }
-
-    Component {
-        id: page5
-        WizardPage5 {
-            onNextPageRequested: stackView.push(page6)
-        }
-    }
-
-    Component {
-        id: page6
-        WizardPage6 {
-            onNextPageRequested: stackView.pop(null)
-        }
-    }
-
-    StackView {
-        id: stackView
-        initialItem: startPage
+    StackLayout {
+        id: layout
+        currentIndex: 0
         anchors.fill: parent
+
+        StartPage { }
+        RolePage { id: rolePage; }
+        NamePage { id: namePage; textStep_1: rolePage.selection; }
+        MailPage { id: mailPage; textStep_1: rolePage.selection; textStep_2: namePage.name; }
+        LoadPage { id: loadPage; textStep_1: rolePage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
+        WizardPage1 {}
+        WizardPage2 {}
+        WizardPage3 {}
+        WizardPage4 {}
+        WizardPage5 {}
+        WizardPage6 {}
+    }
+    DButton {
+        visible: layout.currentIndex > 0
+        source: "assets/ic_back.png"
+        onClicked: { layout.currentIndex--; }
+        x: 24
+        y: 24
+    }
+    Connections {
+        target: layout.children[layout.currentIndex]
+        onNextPageRequested: { layout.currentIndex = Math.min(layout.count - 1, layout.currentIndex + 1); }
     }
 }
