@@ -1,20 +1,20 @@
 <RCC>
     <qresource prefix="/">
+        <file>CityIcon.qml</file>
+        <file>DButton.qml</file>
+        <file>DText.qml</file>
+        <file>DTextThin.qml</file>
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>WizardPage1.qml</file>
-        <file>DButton.qml</file>
         <file>WizardPage2.qml</file>
         <file>assets/fonts/medium.otf</file>
         <file>assets/fonts/thin.otf</file>
         <file>assets/start-button.png</file>
-        <file>DTextThin.qml</file>
-        <file>DText.qml</file>
         <file>WizardPage3.qml</file>
         <file>WizardPage4.qml</file>
         <file>WizardPage5.qml</file>
         <file>WizardPage6.qml</file>
-        <file>CityIcon.qml</file>
         <file>assets/background.png</file>
         <file>assets/cities/ic_agra.png</file>
         <file>assets/cities/ic_agra-disable.png</file>
