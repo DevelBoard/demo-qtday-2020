@@ -20,6 +20,11 @@ ApplicationWindow {
     }
 
     Component {
+        id: startPage
+        StartPage { onNextPageRequested: stackView.push(page1) }
+    }
+
+    Component {
         id: page1
         WizardPage1 {
             onNextPageRequested: stackView.push(page2)
@@ -63,7 +68,7 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: page1
+        initialItem: startPage
         anchors.fill: parent
     }
 }

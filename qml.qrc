@@ -2,10 +2,14 @@
     <qresource prefix="/">
         <file>CityIcon.qml</file>
         <file>DButton.qml</file>
+        <file>DPage.qml</file>
+        <file>DPageSubTitled.qml</file>
+        <file>DPageTitled.qml</file>
         <file>DText.qml</file>
         <file>DTextThin.qml</file>
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>StartPage.qml</file>
         <file>WizardPage1.qml</file>
         <file>WizardPage2.qml</file>
         <file>WizardPage3.qml</file>
