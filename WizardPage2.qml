@@ -9,12 +9,10 @@ DPageSubTitled {
     ListView {
         id: cityList
 
-        // anchors.centerIn: cityScrollView
         anchors.top: parent.top
         anchors.topMargin: 100
         anchors.left: parent.left
         anchors.right: parent.right
-        height: 240
 
         orientation: Qt.Horizontal
 
@@ -28,7 +26,6 @@ DPageSubTitled {
             }
         }
 
-        // highlight: highlightBar
         highlightFollowsCurrentItem: true
         preferredHighlightBegin: 300
         preferredHighlightEnd: 300
