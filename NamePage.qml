@@ -16,10 +16,7 @@ DPageStep {
         y: 152
         anchors.horizontalCenter: parent.horizontalCenter
         placeholderText: "your name..."
-        onAccepted: {
-            if (text)
-                root.nextPageRequested()
-        }
+        onAccepted: { if (text) root.nextPageRequested(); }
         focus: Boolean(text)
     }
     InputPanel {
