@@ -4,7 +4,7 @@ import QtQuick.VirtualKeyboard 2.4
 DPageStep {
     id: root
     step: 3
-    textField: "MAIL ADDRESS"
+    textField: qsTr("MAIL ADDRESS")
 
     readonly property string mail: mailNameText.text + "@" + mailDomainText.text
 
@@ -16,7 +16,7 @@ DPageStep {
             id: mailNameText
             width: 212
             height: parent.height
-            placeholderText: "your name..."
+            placeholderText: qsTr("john.smith")
             onAccepted: {
                 if (!mailDomainText.text)
                 {
@@ -38,7 +38,7 @@ DPageStep {
             id: mailDomainText
             width: 212
             height: parent.height
-            placeholderText: "your name..."
+            placeholderText: "mail.com"
             onAccepted: {
                 if (!mailNameText.text)
                 {

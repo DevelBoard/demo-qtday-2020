@@ -5,7 +5,7 @@ import QtQuick.VirtualKeyboard 2.4
 DPageStep {
     id:root
     step: 2
-    textField: "NAME"
+    textField: qsTr("NAME")
 
     property alias name: nameTextField.text
 
@@ -17,7 +17,7 @@ DPageStep {
         height: 72
         y: 152
         anchors.horizontalCenter: parent.horizontalCenter
-        placeholderText: "your name..."
+        placeholderText: qsTr("your name...")
         onAccepted: { if (text) root.nextPageRequested(); }
         focus: Boolean(text)
     }

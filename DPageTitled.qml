@@ -4,7 +4,7 @@ DPage {
     id: root
     property int titleVerticalOffset: 0
     DTextThin {
-        text: "QT MUSIC FOR YOUR DAILY PATHS"
+        text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
         color: "#77FF9C"
         font.letterSpacing: 5.4
         anchors.top: parent.top

@@ -3,7 +3,7 @@ import QtQuick 2.12
 DPageStep {
     id: root
     step: 1
-    textField: "ROLE"
+    textField: qsTr("ROLE")
 
     property string selection: ""
     property bool showList: false
@@ -20,7 +20,7 @@ DPageStep {
         DText {
             x: 16
             anchors.verticalCenter: parent.verticalCenter
-            text: "select your role"
+            text: qsTr("select your role")
         }
         Image {
             anchors.right: parent.right
@@ -39,9 +39,9 @@ DPageStep {
         id: rolesList
         anchors.top: dropDownButton.bottom
         anchors.left: dropDownButton.left
-        RoleDelegate { roleName: "Project manager"; selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
-        RoleDelegate { roleName: "Developer"; selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
-        RoleDelegate { roleName: "Sales"; selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
+        RoleDelegate { roleName: qsTr("Project manager"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
+        RoleDelegate { roleName: qsTr("Developer"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
+        RoleDelegate { roleName: qsTr("Sales"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
         NumberAnimation on opacity {
             id: fadeOut
             from: 1; to: 0; duration: 250
