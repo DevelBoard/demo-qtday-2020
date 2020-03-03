@@ -8,33 +8,69 @@
         <file>qtquickcontrols2.conf</file>
         <file>WizardPage1.qml</file>
         <file>WizardPage2.qml</file>
-        <file>assets/fonts/medium.otf</file>
-        <file>assets/fonts/thin.otf</file>
-        <file>assets/start-button.png</file>
         <file>WizardPage3.qml</file>
         <file>WizardPage4.qml</file>
         <file>WizardPage5.qml</file>
         <file>WizardPage6.qml</file>
-        <file>assets/background.png</file>
-        <file>assets/cities/ic_agra.png</file>
-        <file>assets/cities/ic_agra-disable.png</file>
-        <file>assets/cities/ic_barcellona.png</file>
-        <file>assets/cities/ic_barcellona-disable.png</file>
-        <file>assets/cities/ic_beijing.png</file>
-        <file>assets/cities/ic_beijing-disable.png</file>
-        <file>assets/cities/ic_london.png</file>
-        <file>assets/cities/ic_london-disable.png</file>
-        <file>assets/cities/ic_moscow.png</file>
+        <file>assets/sports/ic_swimming-disable.png</file>
+        <file>assets/sports/ic_running-active.png</file>
+        <file>assets/sports/ic_swimming-active.png</file>
+        <file>assets/sports/ic_soccer-active.png</file>
+        <file>assets/sports/ic_running-disable.png</file>
+        <file>assets/sports/ic_gym-disable.png</file>
+        <file>assets/sports/ic_tennis-disable.png</file>
+        <file>assets/sports/ic_gym-active.png</file>
+        <file>assets/sports/ic_soccer-disable.png</file>
+        <file>assets/sports/ic_surf-active.png</file>
+        <file>assets/sports/ic_bycicle-active.png</file>
+        <file>assets/sports/ic_bycicle-disable.png</file>
+        <file>assets/sports/ic_crossfit-disable.png</file>
+        <file>assets/sports/ic_tennis-active.png</file>
+        <file>assets/sports/ic_crossfit-active.png</file>
+        <file>assets/sports/ic_surf-disable.png</file>
+        <file>assets/develboard_bg-1.png</file>
         <file>assets/cities/ic_moscow-disable.png</file>
-        <file>assets/cities/ic_new-york.png</file>
-        <file>assets/cities/ic_new-york-disable.png</file>
-        <file>assets/cities/ic_paris.png</file>
-        <file>assets/cities/ic_paris-disable.png</file>
         <file>assets/cities/ic_rome.png</file>
-        <file>assets/cities/ic_rome-disable.png</file>
-        <file>assets/cities/ic_san-paolo.png</file>
-        <file>assets/cities/ic_san-paolo-disable.png</file>
         <file>assets/cities/ic_sidney.png</file>
+        <file>assets/cities/ic_london-disable.png</file>
+        <file>assets/cities/ic_new-york-disable.png</file>
         <file>assets/cities/ic_sidney-disable.png</file>
+        <file>assets/cities/ic_paris-disable.png</file>
+        <file>assets/cities/ic_san-paolo.png</file>
+        <file>assets/cities/ic_new-york.png</file>
+        <file>assets/cities/ic_moscow.png</file>
+        <file>assets/cities/ic_rome-disable.png</file>
+        <file>assets/cities/ic_barcellona-disable.png</file>
+        <file>assets/cities/ic_agra.png</file>
+        <file>assets/cities/ic_london.png</file>
+        <file>assets/cities/ic_agra-disable.png</file>
+        <file>assets/cities/ic_beijing.png</file>
+        <file>assets/cities/ic_san-paolo-disable.png</file>
+        <file>assets/cities/ic_barcellona.png</file>
+        <file>assets/cities/ic_paris.png</file>
+        <file>assets/cities/ic_beijing-disable.png</file>
+        <file>assets/comp_clock-2.png</file>
+        <file>assets/btn/btn_next-active.png</file>
+        <file>assets/btn/btn_next-disable.png</file>
+        <file>assets/btn/btn_start-pressed.png</file>
+        <file>assets/btn/btn_start-active.png</file>
+        <file>assets/btn/btn_thanks.png</file>
+        <file>assets/btn/btn_start-disable.png</file>
+        <file>assets/ic_timeline_tick.png</file>
+        <file>assets/ic_step-1-active.png</file>
+        <file>assets/ic_step-2-ongoing.png</file>
+        <file>assets/ic_step-1-ongoing.png</file>
+        <file>assets/ic_drop-collapse.png</file>
+        <file>assets/ic_handle-bar.png</file>
+        <file>assets/fonts/thin.otf</file>
+        <file>assets/fonts/medium.otf</file>
+        <file>assets/ic_handle.png</file>
+        <file>assets/ic_drop-show.png</file>
+        <file>assets/ic_step-3-active.png</file>
+        <file>assets/ic_step-3-ongoing.png</file>
+        <file>assets/comp_clock-1.png</file>
+        <file>assets/ic_back.png</file>
+        <file>assets/ic_step-2-active.png</file>
+        <file>assets/comp_clock.png</file>
     </qresource>
 </RCC>
