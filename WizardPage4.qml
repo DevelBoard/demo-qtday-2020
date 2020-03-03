@@ -1,11 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-Page {
+DPage {
     id: root
-
-    signal nextPageRequested
-
 
     DTextThin {
         text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
@@ -27,7 +24,7 @@ Page {
         anchors.top: parent.top
         anchors.topMargin: 360
         anchors.horizontalCenter: parent.horizontalCenter
-        source: "assets/start-button.png"
+        source: "assets/btn/btn_start-active.png"
         onClicked: root.nextPageRequested()
     }
 }
