@@ -18,7 +18,7 @@ DPageSubTitled {
 
         highlightFollowsCurrentItem: true
         preferredHighlightBegin: 300
-        preferredHighlightEnd: 300
+        preferredHighlightEnd: 500
         highlightRangeMode: ListView.StrictlyEnforceRange
 
         Component.onCompleted: currentIndex = 5
