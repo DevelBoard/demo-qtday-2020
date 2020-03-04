@@ -21,8 +21,6 @@ DPageSubTitled {
         preferredHighlightEnd: 500
         highlightRangeMode: ListView.StrictlyEnforceRange
 
-        Component.onCompleted: currentIndex = 5
-
         model: ListModel {
             ListElement { baseSource: "assets/cities/ic_rome" }
             ListElement { baseSource: "assets/cities/ic_london" }
@@ -40,6 +38,8 @@ DPageSubTitled {
             source: baseSource + (ListView.isCurrentItem ? ".png" : "-disable.png")
             onClicked: cityList.currentIndex = index
         }
+
+        Component.onCompleted: { currentIndex = 5; }
     }
 
     DButton {
