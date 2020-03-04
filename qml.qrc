@@ -86,5 +86,6 @@
         <file>DTextField.qml</file>
         <file>LoadPage.qml</file>
         <file>TransportDelegate.qml</file>
+        <file>SportDelegate.qml</file>
     </qresource>
 </RCC>
