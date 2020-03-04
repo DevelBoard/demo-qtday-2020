@@ -39,10 +39,10 @@ ApplicationWindow {
     }
     DButton {
         visible: layout.currentIndex > 0
-        source: "assets/ic_back.png"
-        onClicked: { layout.currentIndex--; }
         x: 24
         y: 24
+        source: "assets/ic_back.png"
+        onClicked: { layout.currentIndex--; }
     }
     Connections {
         target: layout.children[layout.currentIndex]
