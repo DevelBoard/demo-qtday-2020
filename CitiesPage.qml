@@ -29,7 +29,7 @@ DPageSubTitled {
             ListElement { baseSource: "assets/cities/ic_barcellona" }
             ListElement { baseSource: "assets/cities/ic_moscow" }
         }
-        delegate: CityIcon {
+        delegate: CityDelegate {
             source: baseSource + (ListView.isCurrentItem ? ".png" : "-disable.png")
             onClicked: cityList.currentIndex = index
         }

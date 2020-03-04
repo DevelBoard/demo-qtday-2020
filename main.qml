@@ -31,7 +31,7 @@ ApplicationWindow {
         LoadPage { id: loadPage; textStep_1: rolePage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
 
         DescribeYourselfPage {}
-        WizardPage2 {}
+        CitiesPage {}
         WizardPage3 {}
         WizardPage4 {}
         WizardPage5 {}

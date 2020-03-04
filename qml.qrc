@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>CityIcon.qml</file>
+        <file>CityDelegate.qml</file>
         <file>DButton.qml</file>
         <file>DPage.qml</file>
         <file>DPageSubTitled.qml</file>
@@ -11,7 +11,7 @@
         <file>qtquickcontrols2.conf</file>
         <file>StartPage.qml</file>
         <file>DescribeYourselfPage.qml</file>
-        <file>WizardPage2.qml</file>
+        <file>CitiesPage.qml</file>
         <file>WizardPage3.qml</file>
         <file>WizardPage4.qml</file>
         <file>WizardPage5.qml</file>
