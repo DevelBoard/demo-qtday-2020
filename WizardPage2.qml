@@ -8,11 +8,8 @@ DPageSubTitled {
 
     ListView {
         id: cityList
-
-        anchors.top: parent.top
-        anchors.topMargin: 100
-        anchors.left: parent.left
-        anchors.right: parent.right
+        width: parent.width
+        y: 100
 
         orientation: Qt.Horizontal
 
