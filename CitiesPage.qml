@@ -5,6 +5,7 @@ DPageSubTitled {
     id: root
 
     text: qsTr("Your ideal capital city you would live in?");
+    property bool selected: false
 
     ListView {
         id: cityList
@@ -31,7 +32,10 @@ DPageSubTitled {
         }
         delegate: CityDelegate {
             source: baseSource + (ListView.isCurrentItem ? ".png" : "-disable.png")
-            onClicked: cityList.currentIndex = index
+            onClicked: {
+                cityList.currentIndex = index;
+                selected = true;
+            }
         }
 
         Component.onCompleted: { currentIndex = 5; }
@@ -41,7 +45,8 @@ DPageSubTitled {
         anchors.top: parent.top
         anchors.topMargin: 368
         anchors.horizontalCenter: parent.horizontalCenter
-        source: "assets/btn/btn_start-active.png"
+        enabled: root.selected
+        source: enabled ? "assets/btn/btn_next-active.png" : "assets/btn/btn_next-disable.png"
         onClicked: root.nextPageRequested()
     }
 }
