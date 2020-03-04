@@ -32,7 +32,7 @@ ApplicationWindow {
 
         DescribeYourselfPage {}
         CitiesPage {}
-        WizardPage3 {}
+        TransportsPage {}
         WizardPage4 {}
         WizardPage5 {}
         WizardPage6 {}
