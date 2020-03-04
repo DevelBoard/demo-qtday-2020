@@ -41,8 +41,7 @@ DPageSubTitled {
     }
 
     DButton {
-        anchors.top: parent.top
-        anchors.topMargin: 368
+        y: 368
         anchors.horizontalCenter: parent.horizontalCenter
         enabled: root.selected
         source: enabled ? "assets/btn/btn_next-active.png" : "assets/btn/btn_next-disable.png"
