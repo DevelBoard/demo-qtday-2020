@@ -38,6 +38,7 @@ DPageSubTitled {
         }
 
         Component.onCompleted: { currentIndex = 5; }
+        onVisibleChanged: { if (!root.selected) currentIndex = 5; }
     }
 
     DButton {
