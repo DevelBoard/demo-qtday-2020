@@ -1,12 +1,12 @@
 import QtQuick 2.12
 
-Image {
+MouseArea {
     id: root
+    width: image.width
+    height: image.height
+    property alias source: image.source
 
-    signal clicked
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: root.clicked()
+    Image {
+        id: image
     }
 }
