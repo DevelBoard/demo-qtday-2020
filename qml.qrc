@@ -85,5 +85,6 @@
         <file>DLine.qml</file>
         <file>DTextField.qml</file>
         <file>LoadPage.qml</file>
+        <file>TransportDelegate.qml</file>
     </qresource>
 </RCC>
