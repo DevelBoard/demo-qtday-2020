@@ -10,10 +10,10 @@ DPageTitled {
         anchors.horizontalCenter: parent.horizontalCenter
     }
     DButton {
-        source: "assets/btn/btn_start-active.png"
         anchors.top: parent.top
         anchors.topMargin: 368
         anchors.horizontalCenter: parent.horizontalCenter
+        source: pressed ? "assets/btn/btn_start-pressed.png" : "assets/btn/btn_start-active.png"
         onClicked: root.nextPageRequested()
     }
 }
