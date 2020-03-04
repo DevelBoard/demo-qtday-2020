@@ -12,7 +12,6 @@ DPageSubTitled {
         y: 100
 
         orientation: Qt.Horizontal
-
         highlightFollowsCurrentItem: true
         preferredHighlightBegin: 300
         preferredHighlightEnd: 500
@@ -30,7 +29,6 @@ DPageSubTitled {
             ListElement { baseSource: "assets/cities/ic_barcellona" }
             ListElement { baseSource: "assets/cities/ic_moscow" }
         }
-
         delegate: CityIcon {
             source: baseSource + (ListView.isCurrentItem ? ".png" : "-disable.png")
             onClicked: cityList.currentIndex = index
