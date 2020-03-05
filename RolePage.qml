@@ -7,7 +7,8 @@ DPageStep {
 
     property string selection: ""
     property bool showList: false
-    onShowListChanged: showList ? fadeIn.start() : fadeOut.start()
+
+    states: State { when: showList; PropertyChanges { target: rolesList; opacity: 1.0; } }
 
     MouseArea {
         id: dropDownButton
@@ -39,16 +40,12 @@ DPageStep {
         id: rolesList
         anchors.top: dropDownButton.bottom
         anchors.left: dropDownButton.left
+        opacity: 0
+        enabled: opacity === 1.0
+        transitions: Transition { NumberAnimation { properties: "opacity"; } }
+
         RoleDelegate { roleName: qsTr("Project manager"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
         RoleDelegate { roleName: qsTr("Developer"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
         RoleDelegate { roleName: qsTr("Sales"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
-        NumberAnimation on opacity {
-            id: fadeOut
-            from: 1; to: 0; duration: 250
-        }
-        NumberAnimation on opacity {
-            id: fadeIn
-            from: 0; to: 1; duration: 250
-        }
     }
 }
