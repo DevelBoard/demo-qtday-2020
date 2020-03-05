@@ -25,10 +25,10 @@ ApplicationWindow {
         anchors.fill: parent
 
         StartPage { }
-        RolePage { id: rolePage; }
-        NamePage { id: namePage; textStep_1: rolePage.selection; }
-        MailPage { id: mailPage; textStep_1: rolePage.selection; textStep_2: namePage.name; }
-        LoadPageStep { id: loadPage; textStep_1: rolePage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
+        RolesPage { id: rolesPage; }
+        NamePage { id: namePage; textStep_1: rolesPage.selection; }
+        MailPage { id: mailPage; textStep_1: rolesPage.selection; textStep_2: namePage.name; }
+        LoadPageStep { id: loadPage; textStep_1: rolesPage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
 
         DescribeYourselfPage {}
         CitiesPage {}
