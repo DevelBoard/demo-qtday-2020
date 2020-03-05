@@ -8,6 +8,8 @@ DPageStep {
 
     readonly property string mail: mailNameText.text + "@" + mailDomainText.text
 
+    onVisibleChanged: { if (!visible) mailNameText.focus = mailDomainText.focus = false; }
+
     Row {
         height: 72;
         y: 152
