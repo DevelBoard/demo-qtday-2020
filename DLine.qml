@@ -3,8 +3,10 @@ import QtQuick 2.12
 Rectangle {
     id: root
     height: 1
-    color: fill === DLine.Full ? "#77FF9C" : "#92A6BF"
+    color: colorOverride ? colorOverride : colorDefault
 
+    readonly property color colorDefault: fill === DLine.Full ? "#77FF9C" : "#92A6BF"
+    property string colorOverride: ""
     property int fill: DLine.Empty
 
     enum Fill {

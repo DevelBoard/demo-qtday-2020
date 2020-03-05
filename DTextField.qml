@@ -7,14 +7,17 @@ TextField {
     font.letterSpacing: 1.2
     font.family: mediumFont.name
     wrapMode: Text.Wrap
-    color: "#77FF9C"
-    placeholderTextColor: "#D6E2F0"
+    color: colorOverride ? colorOverride : "#77FF9C"
+    placeholderTextColor: "#2E4254"
     leftPadding: 20
     background: null
+
+    property string colorOverride: ""
 
     DLine {
         width: parent.width
         anchors.bottom: parent.bottom
+        colorOverride: root.colorOverride
         fill: root.text ? DLine.Full : parent.activeFocus
     }
 }
