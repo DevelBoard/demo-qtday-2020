@@ -27,7 +27,6 @@ DPageStep {
                 if (text)
                     root.nextPageRequested();
             }
-            focus: Boolean(text)
         }
         DText {
             width: 56
@@ -50,7 +49,6 @@ DPageStep {
                 if (text)
                     root.nextPageRequested();
             }
-            focus: Boolean(text)
         }
     }
 
