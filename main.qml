@@ -28,12 +28,13 @@ ApplicationWindow {
         RolePage { id: rolePage; }
         NamePage { id: namePage; textStep_1: rolePage.selection; }
         MailPage { id: mailPage; textStep_1: rolePage.selection; textStep_2: namePage.name; }
-        LoadPage { id: loadPage; textStep_1: rolePage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
+        LoadPageStep { id: loadPage; textStep_1: rolePage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
 
         DescribeYourselfPage {}
         CitiesPage {}
         TransportsPage {}
         SportsPage {}
+        LoadPage {}
         WizardPage5 {}
         WizardPage6 {}
     }
