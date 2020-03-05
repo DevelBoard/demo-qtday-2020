@@ -4,7 +4,8 @@ DPageSubTitled {
     id: root
 
     text: qsTr("Your ideal capital city you would live in?");
-    property bool selected: false
+    readonly property bool selected: Boolean(city)
+    property string city: ""
 
     ListView {
         id: cityList
@@ -19,27 +20,29 @@ DPageSubTitled {
         highlightRangeMode: ListView.StrictlyEnforceRange
 
         model: ListModel {
-            ListElement { baseSource: "assets/cities/ic_rome" }
-            ListElement { baseSource: "assets/cities/ic_london" }
-            ListElement { baseSource: "assets/cities/ic_sidney" }
-            ListElement { baseSource: "assets/cities/ic_agra" }
-            ListElement { baseSource: "assets/cities/ic_new-york" }
-            ListElement { baseSource: "assets/cities/ic_paris" }
-            ListElement { baseSource: "assets/cities/ic_beijing" }
-            ListElement { baseSource: "assets/cities/ic_san-paolo" }
-            ListElement { baseSource: "assets/cities/ic_barcellona" }
-            ListElement { baseSource: "assets/cities/ic_moscow" }
+            id: citiesModel
+            ListElement { city: "rome" }
+            ListElement { city: "london" }
+            ListElement { city: "sidney" }
+            ListElement { city: "agra" }
+            ListElement { city: "new-york" }
+            ListElement { city: "paris" }
+            ListElement { city: "beijing" }
+            ListElement { city: "san-paolo" }
+            ListElement { city: "barcellona" }
+            ListElement { city: "moscow" }
         }
         delegate: CityDelegate {
-            source: baseSource + (ListView.isCurrentItem ? ".png" : "-disable.png")
+            source: "assets/cities/ic_" + city + (ListView.isCurrentItem ? ".png" : "-disable.png")
             onClicked: {
                 cityList.currentIndex = index;
-                root.selected = true;
+                root.city = city;
             }
         }
 
         Component.onCompleted: { currentIndex = 5; }
         onVisibleChanged: { if (!root.selected) currentIndex = 5; }
+        onDragEnded: { root.city = citiesModel.get(currentIndex).city; }
     }
 
     DButton {

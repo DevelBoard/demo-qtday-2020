@@ -29,6 +29,7 @@ DPageSubTitled {
             PathArc { x: 130; y: transportsList.height; radiusX: 100; radiusY: y / 2; }
         }
         model: ListModel {
+            id: transportsModel
             ListElement { transport: QT_TR_NOOP("Bycicle") }
             ListElement { transport: QT_TR_NOOP("Bus") }
             ListElement { transport: QT_TR_NOOP("Car") }
@@ -48,6 +49,7 @@ DPageSubTitled {
         }
         Component.onCompleted: { currentIndex = 4; }
         onVisibleChanged: { if (!root.selectedTransport) currentIndex = 4; }
+        onDragEnded: { root.transport = transportsModel.get(currentIndex).transport; }
     }
     Rectangle {
         id: separator
