@@ -17,6 +17,7 @@ DPageStep {
             width: 212
             height: parent.height
             placeholderText: qsTr("john.smith")
+            inputMethodHints: Qt.ImhEmailCharactersOnly
             onAccepted: {
                 if (!mailDomainText.text)
                 {
@@ -39,6 +40,7 @@ DPageStep {
             width: 212
             height: parent.height
             placeholderText: "mail.com"
+            inputMethodHints: Qt.ImhEmailCharactersOnly
             onAccepted: {
                 if (!mailNameText.text)
                 {
