@@ -34,7 +34,7 @@ DPageSubTitled {
             source: baseSource + (ListView.isCurrentItem ? ".png" : "-disable.png")
             onClicked: {
                 cityList.currentIndex = index;
-                selected = true;
+                root.selected = true;
             }
         }
 
