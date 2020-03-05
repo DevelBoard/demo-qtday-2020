@@ -14,10 +14,9 @@ DPageSubTitled {
 
     PathView {
         id: transportsList
-        width: 300
-        height: 240
-        x: 80
-        y: 112
+        width: 400
+        height: 360
+        y: 40
         pathItemCount: 5
         highlightMoveDuration: 200
         preferredHighlightBegin: 0.5
@@ -25,8 +24,8 @@ DPageSubTitled {
         highlightRangeMode: ListView.StrictlyEnforceRange
 
         path: Path {
-            startX: 130; startY: 0
-            PathArc { x: 130; y: transportsList.height; radiusX: 100; radiusY: y / 2; }
+            startX: 140; startY: 60
+            PathArc { x: 140; y: 320; radiusX: 180; radiusY: y / 2; }
         }
         model: ListModel {
             id: transportsModel
