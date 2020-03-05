@@ -19,13 +19,14 @@ DPageStep {
             placeholderText: qsTr("john.smith")
             inputMethodHints: Qt.ImhEmailCharactersOnly
             onAccepted: {
-                if (!mailDomainText.text)
+                if (!mailDomainText.isValid)
                 {
                     mailDomainText.focus = true;
                     return;
                 }
-                if (text)
-                    root.nextPageRequested();
+                if (!text)
+                    return;
+                root.nextPageRequested();
             }
         }
         DText {
@@ -40,15 +41,22 @@ DPageStep {
             height: parent.height
             placeholderText: "mail.com"
             inputMethodHints: Qt.ImhEmailCharactersOnly
+
+            readonly property bool isValid: text.indexOf(".") > 0 && text.length > text.indexOf(".") + 1
+
             onAccepted: {
                 if (!mailNameText.text)
                 {
                     mailNameText.focus = true;
                     return;
                 }
-                if (text)
+                if (!text)
+                    return;
+                focus = false;
+                if (isValid)
                     root.nextPageRequested();
             }
+            colorOverride: (Boolean(text) && !focus && !isValid) ? "red" : ""
         }
     }
 
