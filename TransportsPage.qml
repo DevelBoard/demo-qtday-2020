@@ -20,8 +20,8 @@ DPageSubTitled {
         y: 112
         pathItemCount: 5
         highlightMoveDuration: 200
-        preferredHighlightBegin: 0.49
-        preferredHighlightEnd: 0.51
+        preferredHighlightBegin: 0.5
+        preferredHighlightEnd: 0.5
         highlightRangeMode: ListView.StrictlyEnforceRange
 
         path: Path {
