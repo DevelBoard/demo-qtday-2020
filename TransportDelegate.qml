@@ -3,7 +3,7 @@ import QtQuick 2.12
 MouseArea {
     id: root
     width: 256
-    height: 32
+    height: transportName.font.pixelSize * 2.6
 
     property bool selected: false
     property alias text: transportName.text
