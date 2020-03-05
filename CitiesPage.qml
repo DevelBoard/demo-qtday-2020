@@ -9,6 +9,7 @@ DPageSubTitled {
     ListView {
         id: cityList
         width: parent.width
+        height: 240
         y: 100
 
         orientation: Qt.Horizontal
