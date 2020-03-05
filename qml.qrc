@@ -13,7 +13,7 @@
         <file>DescribeYourselfPage.qml</file>
         <file>CitiesPage.qml</file>
         <file>TransportsPage.qml</file>
-        <file>WizardPage4.qml</file>
+        <file>SportsPage.qml</file>
         <file>WizardPage5.qml</file>
         <file>WizardPage6.qml</file>
         <file>assets/sports/ic_swimming-disable.png</file>

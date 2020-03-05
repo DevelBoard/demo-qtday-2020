@@ -33,7 +33,7 @@ ApplicationWindow {
         DescribeYourselfPage {}
         CitiesPage {}
         TransportsPage {}
-        WizardPage4 {}
+        SportsPage {}
         WizardPage5 {}
         WizardPage6 {}
     }
