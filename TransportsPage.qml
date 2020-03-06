@@ -8,7 +8,7 @@ DPageSubTitled {
     readonly property bool selected: Boolean(transport) && selectedDistance
     property bool selectedDistance: false
     property string transport: ""
-    property int distance: Math.floor(slider.value)
+    readonly property int distance: Math.floor(slider.value)
 
 //    onTransportChanged: console.log(transport)
 
