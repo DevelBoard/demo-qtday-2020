@@ -51,14 +51,6 @@ DPageSubTitled {
         onDragEnded: { root.transport = transportsModel.get(currentIndex).transport; }
     }
     Rectangle {
-        id: separator
-        width: 1
-        height: 232
-        y: 112.5
-        anchors.horizontalCenter: parent.horizontalCenter
-        color: "#2E4254"
-    }
-    Rectangle {
         width: 160
         height: 160
         radius: 80
