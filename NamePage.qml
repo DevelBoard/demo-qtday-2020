@@ -19,7 +19,6 @@ DPageStep {
         anchors.horizontalCenter: parent.horizontalCenter
         placeholderText: qsTr("your name...")
         onAccepted: { if (text) root.nextPageRequested(); }
-        focus: Boolean(text)
     }
     InputPanel {
         width: parent.width
