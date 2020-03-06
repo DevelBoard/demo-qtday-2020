@@ -100,7 +100,7 @@ DPageSubTitled {
         rightPadding: 48
         topPadding: 48
         from: 0
-        to: 100
+        to: 20
         background: Rectangle {
             x: slider.leftPadding
             y: slider.topPadding - height / 2
