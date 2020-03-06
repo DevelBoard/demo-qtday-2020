@@ -10,11 +10,11 @@ MouseArea {
 
     DText {
         id: transportName
-        x: 135 + 20 * selected
+        x: 100 + 20 * selected
         anchors.verticalCenter: parent.verticalCenter
         color: root.selected ? "#77FF9C" : "#596D80"
         font.letterSpacing: 3 + 2 * selected
-        font.pixelSize: root.selected ? 36 : 18
+        font.pixelSize: root.selected ? 32 : 18
         font.capitalization: Font.AllUppercase
     }
 }
