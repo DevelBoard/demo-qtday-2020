@@ -17,7 +17,7 @@ DPageStep {
             id: mailNameText
             width: 212
             height: parent.height
-            placeholderText: qsTr("john.smith")
+            placeholderText: qsTr(" john.smith")
             inputMethodHints: Qt.ImhEmailCharactersOnly
             onVisibleChanged: { if (visible && !text) forceActiveFocus(); }
             onAccepted: {
@@ -41,7 +41,7 @@ DPageStep {
             id: mailDomainText
             width: 212
             height: parent.height
-            placeholderText: "mail.com"
+            placeholderText: " mail.com"
             inputMethodHints: Qt.ImhEmailCharactersOnly
 
             readonly property bool isValid: text.indexOf(".") > 0 && text.length > text.indexOf(".") + 1

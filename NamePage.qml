@@ -16,7 +16,7 @@ DPageStep {
         height: 72
         y: 152
         anchors.horizontalCenter: parent.horizontalCenter
-        placeholderText: qsTr("your name...")
+        placeholderText: qsTr(" your name...")
         onVisibleChanged: { if (visible) forceActiveFocus(); }
         onAccepted: { if (text) root.nextPageRequested(); }
     }
