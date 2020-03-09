@@ -25,6 +25,8 @@ ApplicationWindow {
         anchors.fill: parent
         enabled: opacity === 1.0
 
+        readonly property DPage currentPage: children[layout.currentIndex]
+        readonly property DPage nextPage: children[layout.nextIndex]
         property int nextIndex: 0
 
         onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
@@ -71,11 +73,11 @@ ApplicationWindow {
         anchors.bottomMargin: -28
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        states: State { when: layout.children[layout.currentIndex].keyboardRequired; PropertyChanges { target: keyboard; opacity: 1.0; } }
+        states: State { when: layout.nextPage.keyboardRequired; PropertyChanges { target: keyboard; opacity: 1.0; } }
         transitions: Transition { NumberAnimation { properties: "opacity"; } }
     }
     Connections {
-        target: layout.children[layout.currentIndex]
+        target: layout.currentPage
         onNextPageRequested: {
             layout.nextIndex = (layout.currentIndex + 1) % layout.count;
             if (layout.nextIndex === 0)
