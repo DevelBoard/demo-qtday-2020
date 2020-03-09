@@ -10,7 +10,6 @@ DPageSubTitled {
     property string transport: ""
     readonly property int distance: Math.floor(slider.value)
 
-//    onTransportChanged: console.log(transport)
 
     PathView {
         id: transportsList
