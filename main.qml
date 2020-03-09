@@ -29,10 +29,6 @@ ApplicationWindow {
         readonly property DPage nextPage: children[layout.nextIndex]
         property int nextIndex: 0
 
-        onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
-        states: State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
-        transitions: Transition { NumberAnimation { properties: "opacity"; } }
-
         function reset() {
             rolesPage.reset();
             namePage.reset();
@@ -42,6 +38,10 @@ ApplicationWindow {
             sportsPage.reset();
             workPage.reset();
         }
+
+        onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
+        states: State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
+        transitions: Transition { NumberAnimation { properties: "opacity"; } }
 
         StartPage { id: startPage; }
         RolesPage { id: rolesPage; }
