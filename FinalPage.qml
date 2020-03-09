@@ -2,7 +2,7 @@ import QtQuick 2.12
 
 DPageTitled {
     id: root
-
+    backButtonRequired: false
     onVisibleChanged: { loadingGif.visible = true; if (visible) triggerNextPageTimer.start(); }
 
     AnimatedImage {

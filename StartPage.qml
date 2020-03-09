@@ -1,6 +1,6 @@
 DPageTitled {
     id: root
-    titleVerticalOffset: 8
+    backButtonRequired: false
 
     DText {
         y: 124
