@@ -1,6 +1,6 @@
 import QtQuick 2.12
 
-DPageTitled {
+DPage {
     id: root
     backButtonRequired: false
     onVisibleChanged: { loadingGif.visible = true; if (visible) triggerNextPageTimer.start(); }

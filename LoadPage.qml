@@ -1,6 +1,6 @@
 import QtQuick 2.12
 
-DPageTitled {
+DPage {
     id: root
 
     onVisibleChanged: { if (visible) triggerNextPageTimer.start(); }

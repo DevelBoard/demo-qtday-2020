@@ -1,4 +1,4 @@
-DPageTitled {
+DPage {
     property alias text: subtitle.text
     DText {
         id: subtitle

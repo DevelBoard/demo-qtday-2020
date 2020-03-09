@@ -1,4 +1,4 @@
-DPageTitled {
+DPage {
     id: root
     backButtonRequired: false
 

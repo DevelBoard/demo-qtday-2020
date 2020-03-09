@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-DPageTitled {
+DPage {
     id: root
     background: Image { source: "assets/develboard_bg-1.png" }
 
