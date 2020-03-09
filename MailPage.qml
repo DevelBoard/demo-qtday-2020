@@ -8,7 +8,6 @@ DPageStep {
 
     readonly property string mail: mailNameText.text + "@" + mailDomainText.text
 
-    onVisibleChanged: { if (!visible) mailNameText.focus = mailDomainText.focus = false; }
 
     Row {
         height: 72;
@@ -20,6 +19,7 @@ DPageStep {
             height: parent.height
             placeholderText: qsTr("john.smith")
             inputMethodHints: Qt.ImhEmailCharactersOnly
+            onVisibleChanged: { if (visible && !text) forceActiveFocus(); }
             onAccepted: {
                 if (!mailDomainText.isValid)
                 {

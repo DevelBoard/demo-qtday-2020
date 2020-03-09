@@ -9,7 +9,6 @@ DPageStep {
 
     property alias name: nameTextField.text
 
-    onVisibleChanged: { if (!visible) nameTextField.focus = false; }
 
     DTextField {
         id: nameTextField
@@ -18,6 +17,7 @@ DPageStep {
         y: 152
         anchors.horizontalCenter: parent.horizontalCenter
         placeholderText: qsTr("your name...")
+        onVisibleChanged: { if (visible) forceActiveFocus(); }
         onAccepted: { if (text) root.nextPageRequested(); }
     }
 }
