@@ -45,6 +45,17 @@ ApplicationWindow {
         source: "assets/ic_back.png"
         onClicked: { layout.currentIndex--; }
     }
+    Keyboard {
+        id: keyboard
+        visible: opacity > 0.0
+        opacity: 0.0
+        width: parent.width
+        anchors.bottomMargin: -28
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        states: State { when: layout.children[layout.currentIndex].keyboardRequired; PropertyChanges { target: keyboard; opacity: 1.0; } }
+        transitions: Transition { NumberAnimation { properties: "opacity"; } }
+    }
     Connections {
         target: layout.children[layout.currentIndex]
         onNextPageRequested: { layout.currentIndex = Math.min(layout.count - 1, layout.currentIndex + 1); }

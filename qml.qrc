@@ -7,6 +7,7 @@
         <file>DPageTitled.qml</file>
         <file>DText.qml</file>
         <file>DTextThin.qml</file>
+        <file>Keyboard.qml</file>
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>StartPage.qml</file>
