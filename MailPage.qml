@@ -23,13 +23,9 @@ DPageStep {
             onVisibleChanged: { if (visible && !text) forceActiveFocus(); }
             onAccepted: {
                 if (!mailDomainText.isValid)
-                {
                     mailDomainText.focus = true;
-                    return;
-                }
-                if (!text)
-                    return;
-                root.nextPageRequested();
+                else if (text)
+                    root.nextPageRequested();
             }
         }
         DText {
@@ -49,14 +45,8 @@ DPageStep {
 
             onAccepted: {
                 if (!mailNameText.text)
-                {
                     mailNameText.focus = true;
-                    return;
-                }
-                if (!text)
-                    return;
-                focus = false;
-                if (isValid)
+                else if (isValid)
                     root.nextPageRequested();
             }
             colorOverride: (Boolean(text) && !focus && !isValid) ? "red" : ""
