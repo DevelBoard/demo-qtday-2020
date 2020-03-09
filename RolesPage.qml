@@ -8,6 +8,8 @@ DPageStep {
     property string selection: ""
     property bool showList: false
 
+    function reset() { selection = ""; showList = false; }
+
     states: State { when: showList; PropertyChanges { target: rolesList; opacity: 1.0; } }
 
     MouseArea {

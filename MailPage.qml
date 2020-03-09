@@ -8,6 +8,7 @@ DPageStep {
 
     readonly property string mail: mailNameText.text + "@" + mailDomainText.text
 
+    function reset() { mailNameText.text = ""; mailDomainText.text = ""; }
 
     Row {
         height: 72;

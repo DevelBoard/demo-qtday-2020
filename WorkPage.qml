@@ -7,7 +7,11 @@ DPageSubTitled {
 
     property bool selected: false
 
-    function reset() { work_0.value = work_1.value = work_2.value = 0.5; }
+    function reset() {
+        slidersGroup.breakBindings();
+        work_0.value = work_1.value = work_2.value = 0.5; selected = false;
+        slidersGroup.restoreBindings();
+    }
 
     Column {
         id: slidersGroup

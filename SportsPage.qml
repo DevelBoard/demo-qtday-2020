@@ -15,6 +15,18 @@ DPageSubTitled {
     property alias swimmingSelected: swimming.selected
     property alias tennisSelected: tennis.selected
 
+    function reset() {
+        selected = false;
+        bycicleSelected = false;
+        crossfitSelected = false;
+        gymSelected = false;
+        runningSelected = false;
+        soccerSelected = false;
+        surfSelected = false;
+        swimmingSelected = false;
+        tennisSelected = false;
+    }
+
     Column {
         y: 140
         anchors.horizontalCenter: parent.horizontalCenter

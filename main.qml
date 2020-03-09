@@ -31,6 +31,16 @@ ApplicationWindow {
         states: State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
         transitions: Transition { NumberAnimation { properties: "opacity"; } }
 
+        function reset() {
+            rolesPage.reset();
+            namePage.reset();
+            mailPage.reset();
+            citiesPage.reset();
+            transportsPage.reset();
+            sportsPage.reset();
+            workPage.reset();
+        }
+
         StartPage { }
         RolesPage { id: rolesPage; }
         NamePage { id: namePage; textStep_1: rolesPage.selection; }

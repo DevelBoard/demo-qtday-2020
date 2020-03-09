@@ -10,6 +10,7 @@ DPageSubTitled {
     property string transport: ""
     readonly property int distance: Math.floor(slider.value)
 
+    function reset() { transportsList.currentIndex = 0; transport = ""; slider.value = slider.from; selectedDistance = false; }
 
     PathView {
         id: transportsList

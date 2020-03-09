@@ -9,6 +9,7 @@ DPageStep {
 
     property alias name: nameTextField.text
 
+    function reset() { name = ""; }
 
     DTextField {
         id: nameTextField

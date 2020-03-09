@@ -7,6 +7,8 @@ DPageSubTitled {
     readonly property bool selected: Boolean(city)
     property string city: ""
 
+    function reset() { cityList.currentIndex = 0; city = ""; }
+
     ListView {
         id: cityList
         width: parent.width
