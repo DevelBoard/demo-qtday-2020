@@ -24,6 +24,17 @@ DPageSubTitled {
         WorkDelegate { id: work_1; text: qsTr("Software design"); color: "#29FFEF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 1; } }
         WorkDelegate { id: work_2; text: qsTr("Just gaming!"); color: "#A4FF29"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 2; } }
 
+        function breakBindings() {
+            functionalTotal = functionalTotal;
+            functionalDelta = functionalDelta;
+            shouldAdjust = shouldAdjust;
+        }
+        function restoreBindings() {
+            functionalTotal = Qt.binding(function() { return work_0.functionalValue + work_1.functionalValue + work_2.functionalValue; })
+            functionalDelta = Qt.binding(function() { return functionalTotal - 1.0; })
+            shouldAdjust = Qt.binding(function() { return Math.abs(functionalDelta) > updateTriggerThreshold; })
+        }
+
         onShouldAdjustChanged: {
             if (!shouldAdjust)
                 return;
@@ -38,18 +49,10 @@ DPageSubTitled {
             var unmovedRatio_1 = unmovedFunctionalTotal ? unmovedSlider_1.functionalValue / unmovedFunctionalTotal : 0.5;
             var unmovedRatio_2 = unmovedFunctionalTotal ? unmovedSlider_2.functionalValue / unmovedFunctionalTotal : 0.5;
 
-            // Break bindings before update to prevent binding loops
-            functionalTotal = functionalTotal;
-            functionalDelta = functionalDelta;
-            shouldAdjust = shouldAdjust;
-
+            breakBindings();
             unmovedSlider_1.setFunctionalValue(unmovedFunctionalTarget * unmovedRatio_1);
             unmovedSlider_2.setFunctionalValue(unmovedFunctionalTarget * unmovedRatio_2);
-
-            // Reset back bindings after update
-            functionalTotal = Qt.binding(function() { return work_0.functionalValue + work_1.functionalValue + work_2.functionalValue; })
-            functionalDelta = Qt.binding(function() { return functionalTotal - 1.0; })
-            shouldAdjust = Qt.binding(function() { return Math.abs(functionalDelta) > updateTriggerThreshold; })
+            restoreBindings();
         }
     }
 
