@@ -56,7 +56,8 @@ ApplicationWindow {
         FinalPage { id: finalPage}
     }
     DButton {
-        visible: layout.currentIndex > 0
+        readonly property int pageIndex: layout.currentIndex
+        visible: pageIndex && pageIndex < layout.count - 1
         x: 24
         y: 24
         source: "assets/ic_back.png"
