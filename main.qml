@@ -35,15 +35,15 @@ ApplicationWindow {
         RolesPage { id: rolesPage; }
         NamePage { id: namePage; textStep_1: rolesPage.selection; }
         MailPage { id: mailPage; textStep_1: rolesPage.selection; textStep_2: namePage.name; }
-        LoadPageStep { id: loadPage; textStep_1: rolesPage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
+        LoadPageStep { id: loadPageStep; textStep_1: rolesPage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
 
-        DescribeYourselfPage {}
-        CitiesPage {}
-        TransportsPage {}
-        SportsPage {}
-        LoadPage {}
-        WorkPage {}
-        FinalPage {}
+        DescribeYourselfPage { id: describeYourselfPage }
+        CitiesPage { id: citiesPage }
+        TransportsPage { id: transportsPage }
+        SportsPage { id: sportsPage }
+        LoadPage { id: loadPage }
+        WorkPage { id: workPage }
+        FinalPage { id: finalPage}
     }
     DButton {
         visible: layout.currentIndex > 0
