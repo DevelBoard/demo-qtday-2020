@@ -40,8 +40,7 @@ DPageSubTitled {
             }
         }
 
-        Component.onCompleted: { currentIndex = 5; }
-        onVisibleChanged: { if (!root.selected) currentIndex = 5; }
+        onVisibleChanged: { if (visible && !root.selected) currentIndex = 5; }
         onDragEnded: { root.city = citiesModel.get(currentIndex).city; }
     }
 
