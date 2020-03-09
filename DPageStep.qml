@@ -2,6 +2,8 @@ import QtQuick 2.12
 
 DPage {
     id: root
+    titleRequired: false
+
     property int step: 0
     property alias textField: field.text
     property alias textStep_1: step_1.text
