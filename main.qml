@@ -43,7 +43,7 @@ ApplicationWindow {
             workPage.reset();
         }
 
-        StartPage { }
+        StartPage { id: startPage; }
         RolesPage { id: rolesPage; }
         NamePage { id: namePage; textStep_1: rolesPage.selection; }
         MailPage { id: mailPage; textStep_1: rolesPage.selection; textStep_2: namePage.name; }
