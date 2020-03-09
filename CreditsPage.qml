@@ -5,6 +5,8 @@ DPageTitled {
     id: root
     background: Image { source: "assets/develboard_bg-1.png" }
 
+    onVisibleChanged: { if (!visible) flickable.contentY = 0; }
+
     Flickable {
         id: flickable
         width: 624
