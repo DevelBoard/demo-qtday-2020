@@ -49,13 +49,14 @@ ApplicationWindow {
         MailPage { id: mailPage; textStep_1: rolesPage.selection; textStep_2: namePage.name; }
         LoadPageStep { id: loadPageStep; textStep_1: rolesPage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
 
-        DescribeYourselfPage { id: describeYourselfPage }
-        CitiesPage { id: citiesPage }
-        TransportsPage { id: transportsPage }
-        SportsPage { id: sportsPage }
-        LoadPage { id: loadPage }
-        WorkPage { id: workPage }
-        FinalPage { id: finalPage}
+        DescribeYourselfPage { id: describeYourselfPage; backButtonRequired: false; }
+        CitiesPage { id: citiesPage; }
+        TransportsPage { id: transportsPage; }
+        SportsPage { id: sportsPage; }
+        LoadPage { id: loadPage; }
+
+        WorkPage { id: workPage; backButtonRequired: false; }
+        FinalPage { id: finalPage; }
     }
     DButton {
         readonly property int pageIndex: layout.currentIndex
