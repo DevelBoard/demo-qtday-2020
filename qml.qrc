@@ -16,6 +16,20 @@
         <file>SportsPage.qml</file>
         <file>WizardPage5.qml</file>
         <file>WizardPage6.qml</file>
+        <file>RolesPage.qml</file>
+        <file>DPageStep.qml</file>
+        <file>RoleDelegate.qml</file>
+        <file>MailPage.qml</file>
+        <file>NamePage.qml</file>
+        <file>DLine.qml</file>
+        <file>DTextField.qml</file>
+        <file>LoadPage.qml</file>
+        <file>LoadPageStep.qml</file>
+        <file>TransportDelegate.qml</file>
+        <file>SportDelegate.qml</file>
+        <file>WorkDelegate.qml</file>
+        <file>WorkActivityShapePath.qml</file>
+        <file>CreditsPage.qml</file>
         <file>assets/loading.gif</file>
         <file>assets/sports/ic_swimming-disable.png</file>
         <file>assets/sports/ic_running-active.png</file>
@@ -81,16 +95,5 @@
         <file>assets/ic_back.png</file>
         <file>assets/ic_step-2-active.png</file>
         <file>assets/comp_clock.png</file>
-        <file>RolesPage.qml</file>
-        <file>DPageStep.qml</file>
-        <file>RoleDelegate.qml</file>
-        <file>MailPage.qml</file>
-        <file>NamePage.qml</file>
-        <file>DLine.qml</file>
-        <file>DTextField.qml</file>
-        <file>LoadPage.qml</file>
-        <file>LoadPageStep.qml</file>
-        <file>TransportDelegate.qml</file>
-        <file>SportDelegate.qml</file>
     </qresource>
 </RCC>
