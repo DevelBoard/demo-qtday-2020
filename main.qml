@@ -23,6 +23,13 @@ ApplicationWindow {
         id: layout
         currentIndex: 0
         anchors.fill: parent
+        enabled: opacity === 1.0
+
+        property int nextIndex: 0
+
+        onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
+        states: State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
+        transitions: Transition { NumberAnimation { properties: "opacity"; } }
 
         StartPage { }
         RolesPage { id: rolesPage; }
@@ -58,6 +65,10 @@ ApplicationWindow {
     }
     Connections {
         target: layout.children[layout.currentIndex]
-        onNextPageRequested: { layout.currentIndex = Math.min(layout.count - 1, layout.currentIndex + 1); }
+        onNextPageRequested: {
+            layout.nextIndex = (layout.currentIndex + 1) % layout.count;
+            if (layout.nextIndex === 0)
+                layout.reset();
+        }
     }
 }
