@@ -59,12 +59,15 @@ ApplicationWindow {
         FinalPage { id: finalPage; }
     }
     DButton {
-        readonly property int pageIndex: layout.currentIndex
-        visible: pageIndex && pageIndex < layout.count - 1
+        id: backButton
+        visible: opacity > 0.0
+        opacity: 0.0
         x: 24
         y: 24
         source: "assets/ic_back.png"
-        onClicked: { layout.currentIndex--; }
+        states: State { when: layout.currentPage.backButtonRequired; PropertyChanges { target: backButton; opacity: 1.0; } }
+        transitions: Transition { NumberAnimation { properties: "opacity"; } }
+        onClicked: { layout.nextIndex--; }
     }
     Keyboard {
         id: keyboard
