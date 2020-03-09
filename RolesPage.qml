@@ -10,8 +10,6 @@ DPageStep {
 
     function reset() { selection = ""; showList = false; }
 
-    states: State { when: showList; PropertyChanges { target: rolesList; opacity: 1.0; } }
-
     MouseArea {
         id: dropDownButton
         width: 480
@@ -45,6 +43,8 @@ DPageStep {
         anchors.left: dropDownButton.left
         opacity: 0
         enabled: opacity === 1.0
+
+        states: State { when: root.showList; PropertyChanges { target: rolesList; opacity: 1.0; } }
         transitions: Transition { NumberAnimation { properties: "opacity"; } }
 
         RoleDelegate { roleName: qsTr("Project manager"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
