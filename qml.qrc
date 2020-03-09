@@ -14,8 +14,8 @@
         <file>CitiesPage.qml</file>
         <file>TransportsPage.qml</file>
         <file>SportsPage.qml</file>
-        <file>WizardPage5.qml</file>
-        <file>WizardPage6.qml</file>
+        <file>WorkPage.qml</file>
+        <file>FinalPage.qml</file>
         <file>RolesPage.qml</file>
         <file>DPageStep.qml</file>
         <file>RoleDelegate.qml</file>

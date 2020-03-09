@@ -35,8 +35,8 @@ ApplicationWindow {
         TransportsPage {}
         SportsPage {}
         LoadPage {}
-        WizardPage5 {}
-        WizardPage6 {}
+        WorkPage {}
+        FinalPage {}
     }
     DButton {
         visible: layout.currentIndex > 0
