@@ -49,7 +49,7 @@ DPageStep {
                 else if (isValid)
                     root.nextPageRequested();
             }
-            colorOverride: (Boolean(text) && !focus && !isValid) ? "red" : ""
+            colorOverride: (Boolean(text) && !isValid) ? "red" : ""
         }
     }
 }
