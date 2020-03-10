@@ -96,6 +96,11 @@
         <file>assets/ic_step-3-ongoing.png</file>
         <file>assets/ic_back.png</file>
         <file>assets/ic_step-2-active.png</file>
+        <file>assets/pop-up/ic_reset-pressed.png</file>
+        <file>assets/pop-up/ic_cancel-active.png</file>
+        <file>assets/pop-up/ic_cancel-pressed.png</file>
+        <file>assets/pop-up/ic_reset-active.png</file>
+        <file>assets/pop-up/bg_pop-up.png</file>
         <file>assets/comp_clock.png</file>
         <file>Colors.qml</file>
     </qresource>
