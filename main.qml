@@ -82,12 +82,17 @@ ApplicationWindow {
         anchors.horizontalCenter: parent.horizontalCenter
         show: layout.nextPage.keyboardRequired && !resetPopup.visible
     }
+    PopupReset { id: resetPopup; anchors.centerIn: parent; }
     Connections {
         target: layout.currentPage
         onNextPageRequested: {
             layout.nextIndex = (layout.currentIndex + 1) % layout.count;
             if (layout.nextIndex === 0)
                 layout.reset();
+        }
+        onPopupRequested: {
+            if (layout.currentIndex !== 0)
+                resetPopup.open();
         }
     }
 }
