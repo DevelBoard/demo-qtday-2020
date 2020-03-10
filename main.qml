@@ -61,15 +61,11 @@ ApplicationWindow {
 
         FinalPage { id: finalPage; }
     }
-    DButton {
+    ButtonBack {
         id: backButton
-        visible: opacity > 0.0
-        opacity: 0.0
         x: 24
         y: 24
-        source: "assets/ic_back.png"
-        states: State { when: layout.currentPage.backButtonRequired; PropertyChanges { target: backButton; opacity: 1.0; } }
-        transitions: Transition { NumberAnimation { properties: "opacity"; } }
+        show: layout.currentPage.backButtonRequired
         onClicked: { layout.nextIndex--; }
     }
     DTextThin {
