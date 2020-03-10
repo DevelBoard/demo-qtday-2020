@@ -8,8 +8,6 @@ DPage {
     AnimatedImage {
         id: loadingGif
         y: 72
-        width: 151
-        height: 104
         anchors.horizontalCenter: parent.horizontalCenter
         source: "assets/loading.gif"
     }

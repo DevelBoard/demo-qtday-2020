@@ -7,8 +7,6 @@ DPageStep {
     onVisibleChanged: { if (visible) triggerNextPageTimer.start(); }
 
     AnimatedImage {
-        width: 300
-        height: 200
         anchors.centerIn: parent
         source: "assets/loading.gif"
     }
