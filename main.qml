@@ -45,9 +45,9 @@ ApplicationWindow {
 
         StartPage { id: startPage; }
         RolesPage { id: rolesPage; }
-        NamePage { id: namePage; textStep_1: rolesPage.selection; }
-        MailPage { id: mailPage; textStep_1: rolesPage.selection; textStep_2: namePage.name; }
-        LoadPageStep { id: loadPageStep; textStep_1: rolesPage.selection; textStep_2: namePage.name; textStep_3: mailPage.mail; }
+        NamePage { id: namePage; textStep_1: rolesPage.role; }
+        MailPage { id: mailPage; textStep_1: rolesPage.role; textStep_2: namePage.name; }
+        LoadPageStep { id: loadPage_1; textStep_1: rolesPage.role; textStep_2: namePage.name; textStep_3: mailPage.mail; }
 
         DescribeYourselfPage { id: describeYourselfPage; backButtonRequired: false; }
         CitiesPage { id: citiesPage; }

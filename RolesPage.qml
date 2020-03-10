@@ -3,52 +3,73 @@ import QtQuick 2.12
 DPageStep {
     id: root
     step: 1
-    textField: qsTr("ROLE")
 
-    property string selection: ""
+    property string role: ""
     property bool showList: false
 
-    function reset() { selection = ""; showList = false; }
+    function reset() { role = ""; showList = false; }
 
-    MouseArea {
-        id: dropDownButton
-        width: 480
-        height: 72
-        y: 152
-        anchors.horizontalCenter: parent.horizontalCenter
-        onClicked: { root.showList = !root.showList; }
-
-        DText {
-            x: 16
-            anchors.verticalCenter: parent.verticalCenter
-            text: qsTr("Select your role")
-            color: Colors.white
+    content: Column {
+        y: 30
+        DTextThin {
+            id: field
+            anchors.left: dropDownButton.left
+            text: qsTr("ROLE")
+            font.pixelSize: 16
         }
-        Image {
-            anchors.right: parent.right
-            anchors.verticalCenter: parent.verticalCenter
-            source: root.showList ? "assets/ic_drop-collapse.png" : "assets/ic_drop-show.png"
-        }
-        Rectangle {
-            width: parent.width
-            height: 1
-            anchors.bottom: parent.bottom
+        MouseArea {
+            id: dropDownButton
+            width: 480
+            height: 72
             anchors.horizontalCenter: parent.horizontalCenter
-            color: Colors.lightgrey
+            onClicked: { root.showList = !root.showList; }
+
+            DText {
+                x: 16
+                anchors.verticalCenter: parent.verticalCenter
+                text: qsTr("Select your role")
+                color: Colors.white
+            }
+            Image {
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+                source: root.showList ? "assets/ic_drop-collapse.png" : "assets/ic_drop-show.png"
+            }
+            Rectangle {
+                width: parent.width
+                height: 1
+                anchors.bottom: parent.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+                color: Colors.lightgrey
+            }
+        }
+        ListView {
+            id: rolesList
+            width: dropDownButton.width
+            height: 256
+            anchors.left: dropDownButton.left
+            enabled: opacity === 1.0
+            clip: true
+            model: rolesModel
+            delegate: RoleDelegate {
+                roleName: qsTr(model.role)
+                selected: containsPress || root.role === model.role
+                onClicked: {
+                    root.nextPageRequested();
+                    root.role = model.role;
+                }
+            }
+            transitions: Transition { OpacityAnimator { target: rolesList; duration: 500; } }
+            states: [
+                State { when: !root.showList; PropertyChanges { target: rolesList; opacity: 0.0; } },
+                State { when: root.showList; PropertyChanges { target: rolesList; opacity: 1.0; } }
+            ]
         }
     }
-    Column {
-        id: rolesList
-        anchors.top: dropDownButton.bottom
-        anchors.left: dropDownButton.left
-        opacity: 0
-        enabled: opacity === 1.0
-
-        states: State { when: root.showList; PropertyChanges { target: rolesList; opacity: 1.0; } }
-        transitions: Transition { NumberAnimation { properties: "opacity"; } }
-
-        RoleDelegate { roleName: qsTr("Project manager"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
-        RoleDelegate { roleName: qsTr("Developer"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
-        RoleDelegate { roleName: qsTr("Sales"); selected: root.selection === roleName; onPressed: { root.selection = roleName; } onReleased: root.nextPageRequested() }
+    ListModel {
+        id: rolesModel
+        ListElement { role: QT_TR_NOOP("Project manager") }
+        ListElement { role: QT_TR_NOOP("Developer") }
+        ListElement { role: QT_TR_NOOP("Sales") }
     }
 }
