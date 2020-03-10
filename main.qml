@@ -61,6 +61,8 @@ ApplicationWindow {
 
         FinalPage { id: finalPage; }
     }
+
+//  ---- Overlay elements
     ButtonBack {
         id: backButton
         x: 24
@@ -83,6 +85,8 @@ ApplicationWindow {
         show: layout.nextPage.keyboardRequired && !resetPopup.visible
     }
     PopupReset { id: resetPopup; anchors.centerIn: parent; }
+
+//  ---- Connections
     Connections {
         target: layout.currentPage
         onNextPageRequested: {
