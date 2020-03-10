@@ -13,5 +13,11 @@ InputPanel {
         anchors.right: parent.right
         anchors.rightMargin: 40
         color: Colors.green
+        Text {
+            anchors.centerIn: parent
+            text: "ENTER"
+            color: Colors.blue
+            font.pixelSize: 18
+        }
     }
 }
