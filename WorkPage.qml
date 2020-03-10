@@ -73,7 +73,7 @@ DPageSubTitled {
             anchors.verticalCenterOffset: -8
             anchors.centerIn: parent
 
-            readonly property int strokeWidth: 8
+            readonly property int strokeWidth: 13
 
             WorkActivityShapePath {
                 id: shapePath_0
