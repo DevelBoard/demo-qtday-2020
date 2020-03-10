@@ -80,14 +80,11 @@ ApplicationWindow {
     }
     Keyboard {
         id: keyboard
-        visible: opacity > 0.0
-        opacity: 0.0
         width: parent.width
         anchors.bottomMargin: -28
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        states: State { when: layout.nextPage.keyboardRequired; PropertyChanges { target: keyboard; opacity: 1.0; } }
-        transitions: Transition { NumberAnimation { properties: "opacity"; } }
+        show: layout.nextPage.keyboardRequired && !resetPopup.visible
     }
     Connections {
         target: layout.currentPage
