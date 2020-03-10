@@ -7,8 +7,8 @@ TextField {
     font.letterSpacing: 1.2
     font.family: mediumFont.name
     wrapMode: Text.Wrap
-    color: colorOverride ? colorOverride : "#77FF9C"
-    placeholderTextColor: "#2E4254"
+    color: colorOverride ? colorOverride : Colors.green
+    placeholderTextColor: Colors.lightblue
     leftPadding: 20
     background: null
 

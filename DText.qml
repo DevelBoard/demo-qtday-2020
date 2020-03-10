@@ -5,5 +5,5 @@ Text {
     font.family: mediumFont.name
     horizontalAlignment: Qt.AlignHCenter
     wrapMode: Text.Wrap
-    color: "#D6E2F0"
+    color: Colors.white
 }

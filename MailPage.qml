@@ -32,7 +32,7 @@ DPageStep {
             width: 56
             anchors.verticalCenter: parent.verticalCenter
             text: "@"
-            color: "#77FF9C"
+            color: Colors.green
         }
         DTextField {
             id: mailDomainText
@@ -49,7 +49,7 @@ DPageStep {
                 else if (isValid)
                     root.nextPageRequested();
             }
-            colorOverride: (Boolean(text) && !isValid) ? "red" : ""
+            colorOverride: (Boolean(text) && !isValid) ? Colors.red : ""
         }
     }
 }

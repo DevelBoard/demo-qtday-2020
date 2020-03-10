@@ -57,8 +57,8 @@ DPageSubTitled {
         anchors.right: parent.right
         anchors.rightMargin: 96
         gradient: Gradient {
-                GradientStop { position: 1.0; color: "#041B2B" }
-                GradientStop { position: 0.0; color: "#2E4254" }
+                GradientStop { position: 1.0; color: Colors.blue }
+                GradientStop { position: 0.0; color: Colors.lightblue }
         }
 
         Row {
@@ -68,14 +68,14 @@ DPageSubTitled {
             DText {
                 id: textValue
                 text: root.distance
-                color: "#77FF9C"
+                color: Colors.green
                 font.pixelSize: 32
             }
             DText {
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 3
                 text: "km"
-                color: "#92A6BF"
+                color: Colors.lightgrey
                 font.pixelSize: 18
             }
         }
@@ -97,14 +97,14 @@ DPageSubTitled {
             y: slider.topPadding - height / 2
             height: 1
             width: slider.availableWidth
-            color: "#92A6BF"
+            color: Colors.lightgrey
             Rectangle {
                 width: slider.visualPosition * parent.width
                 height: parent.height
                 gradient: Gradient {
                         orientation: Gradient.Horizontal
-                        GradientStop { position: 0.49; color: "#77FF9C" }
-                        GradientStop { position: 0.0; color: "#3377FF9C" }
+                        GradientStop { position: 0.49; color: Colors.green }
+                        GradientStop { position: 0.0; color: Colors.transparentlightgreen }
                 }
                 Rectangle {
                     width: 9
@@ -112,7 +112,7 @@ DPageSubTitled {
                     y: -height / 2
                     anchors.right: parent.right
                     anchors.rightMargin: -width / 2
-                    color: "#77FF9C"
+                    color: Colors.green
                     radius: 4.5
                 }
             }

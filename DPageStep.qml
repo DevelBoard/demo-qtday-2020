@@ -42,7 +42,7 @@ DPage {
                 anchors.top: parent.bottom
                 anchors.topMargin: 8
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#77FF9C"
+                color: Colors.green
                 font.pixelSize: 10
                 font.letterSpacing: 1.2
                 font.capitalization: Font.AllUppercase
@@ -72,7 +72,7 @@ DPage {
                 anchors.top: parent.bottom
                 anchors.topMargin: 8
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#77FF9C"
+                color: Colors.green
                 font.pixelSize: 10
                 font.letterSpacing: 1.2
                 font.capitalization: Font.AllUppercase
@@ -102,7 +102,7 @@ DPage {
                 anchors.top: parent.bottom
                 anchors.topMargin: 8
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#77FF9C"
+                color: Colors.green
                 font.pixelSize: 10
                 font.letterSpacing: 1.2
                 font.capitalization: Font.AllUppercase

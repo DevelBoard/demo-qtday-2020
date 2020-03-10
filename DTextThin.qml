@@ -6,5 +6,5 @@ Text {
     font.weight: Font.Light
     horizontalAlignment: Qt.AlignHCenter
     wrapMode: Text.Wrap
-    color: "#D6E2F0"
+    color: Colors.white
 }

@@ -13,7 +13,8 @@ Slider {
     readonly property real exponent: 1.5849625007209
     readonly property real invExponent: 1 / exponent
     readonly property real functionalValue: Math.pow(value, exponent)
-    property string color: "#FFFFFF"
+    property color color: Colors.grey
+    property color lightcolor: Colors.white
     property alias text: workName.text
 
     function setFunctionalValue(newFunctionalValue) { value = Math.pow(newFunctionalValue, invExponent); }
@@ -23,14 +24,14 @@ Slider {
         anchors.verticalCenter: root.verticalCenter
         height: 8
         width: root.availableWidth
-        color: "#2E4254"
+        color: Colors.lightblue
         Rectangle {
             width: root.visualPosition * parent.width
             height: parent.height
             gradient: Gradient {
                     orientation: Gradient.Horizontal
                     GradientStop { position: 1.0; color: root.color }
-                    GradientStop { position: 0.0; color: "#66" + root.color.substring(1, 7) }
+                    GradientStop { position: 0.0; color: root.lightcolor }
             }
         }
     }
@@ -46,7 +47,7 @@ Slider {
         width: 176
         x: -188
         anchors.verticalCenter: root.verticalCenter
-        color: "#92A6BF"
+        color: Colors.lightgrey
         font.pixelSize: 14
         wrapMode: Text.Wrap
         font.capitalization: Font.AllUppercase

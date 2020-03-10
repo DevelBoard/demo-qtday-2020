@@ -5,7 +5,7 @@ DPage {
     property int titleVerticalOffset: 0
     DTextThin {
         text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
-        color: "#77FF9C"
+        color: Colors.green
         font.letterSpacing: 5.4
         anchors.top: parent.top
         anchors.topMargin: 20 + root.titleVerticalOffset

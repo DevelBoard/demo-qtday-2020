@@ -22,7 +22,7 @@ DPageStep {
             x: 16
             anchors.verticalCenter: parent.verticalCenter
             text: qsTr("select your role")
-            color: "#2E4254"
+            color: Colors.white
         }
         Image {
             anchors.right: parent.right
@@ -34,7 +34,7 @@ DPageStep {
             height: 1
             anchors.bottom: parent.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            color: "#92A6BF"
+            color: Colors.lightgrey
         }
     }
     Column {

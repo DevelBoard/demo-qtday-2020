@@ -12,6 +12,6 @@ InputPanel {
         y: 63
         anchors.right: parent.right
         anchors.rightMargin: 40
-        color: "#00FFF5"
+        color: Colors.green
     }
 }

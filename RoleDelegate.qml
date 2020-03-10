@@ -7,13 +7,13 @@ MouseArea {
 
     property alias roleName: textField.text
     property bool selected: false
-    readonly property string currentColor: selected ? "#77FF9C" : "#D6E2F0"
+    readonly property string currentColor: selected ? Colors.green : Colors.white
 
     Rectangle {
         width: parent.width
         height: 56
         y: 8
-        color: root.selected ? "transparent" : "#2E4254"
+        color: root.selected ? "transparent" : Colors.lightblue
 
         DText {
             id: textField

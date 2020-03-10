@@ -24,9 +24,9 @@ DPageSubTitled {
         property bool shouldAdjust: Math.abs(functionalDelta) > updateTriggerThreshold
         property int lastSliderMovedIndex: -1
 
-        WorkDelegate { id: work_0; text: qsTr("Coding\nthousands of rows..."); color: "#FF29FF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 0; } }
-        WorkDelegate { id: work_1; text: qsTr("Software design"); color: "#29FFEF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 1; } }
-        WorkDelegate { id: work_2; text: qsTr("Just gaming!"); color: "#A4FF29"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 2; } }
+        WorkDelegate { id: work_0; text: qsTr("Coding\nthousands of rows..."); color: "#FF29FF"; lightcolor: "#66FF29FF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 0; } }
+        WorkDelegate { id: work_1; text: qsTr("Software design"); color: "#29FFEF"; lightcolor: "#6629FFEF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 1; } }
+        WorkDelegate { id: work_2; text: qsTr("Just gaming!"); color: "#A4FF29"; lightcolor: "#66A4FF29"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 2; } }
 
         function breakBindings() {
             functionalTotal = functionalTotal;

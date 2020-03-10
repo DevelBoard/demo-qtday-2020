@@ -20,7 +20,7 @@ DPage {
 
         Rectangle {
             anchors.fill: parent
-            color: "#041B2B"
+            color: Colors.blue
         }
         Column {
             id: creditsContent
@@ -37,7 +37,7 @@ DPage {
                 font.pixelSize: 20
                 font.family: "Helvetica"
                 wrapMode: Text.Wrap
-                color: "#D6E2F0"
+                color: Colors.white
             }
             Image {
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -56,11 +56,11 @@ DPage {
                 height: parent.availableHeight + parent.availableWidth * 3 / 2
                 x: parent.leftPadding - parent.availableWidth / 2
                 y: parent.topPadding - parent.availableWidth / 2
-                color: "#2E4254"
+                color: Colors.lightblue
                 radius: width / 2
             }
             contentItem: Rectangle {
-                color: "#ADFFCE"
+                color: Colors.lightgreen
                 radius: width / 2
             }
         }

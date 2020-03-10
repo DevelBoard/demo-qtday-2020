@@ -12,7 +12,7 @@ MouseArea {
         id: transportName
         x: 100 + 20 * selected
         anchors.verticalCenter: parent.verticalCenter
-        color: root.selected ? "#77FF9C" : "#596D80"
+        color: root.selected ? Colors.green : Colors.grey
         font.letterSpacing: 3 + 2 * selected
         font.pixelSize: root.selected ? 32 : 18
         font.capitalization: Font.AllUppercase

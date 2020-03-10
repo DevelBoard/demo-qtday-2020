@@ -40,7 +40,7 @@ DPage {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         text: qsTr("Credits")
-        color: "#ADFFCE"
+        color: Colors.lightgreen
         font.pixelSize: 18
         font.underline: true
         verticalAlignment: Text.AlignVCenter
