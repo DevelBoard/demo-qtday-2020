@@ -68,15 +68,11 @@ ApplicationWindow {
         show: layout.currentPage.backButtonRequired
         onClicked: { layout.nextIndex--; }
     }
-    DTextThin {
+    Title {
         id: title
         anchors.verticalCenter: backButton.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        text: qsTr("QT MUSIC FOR YOUR DAILY PATHS")
-        color: Colors.green
-        font.letterSpacing: 5.4
-        states: State { when: !layout.currentPage.titleRequired; PropertyChanges { target: title; opacity: 0.0; } }
-        transitions: Transition { NumberAnimation { properties: "opacity"; } }
+        show: layout.currentPage.titleRequired
     }
     Keyboard {
         id: keyboard
