@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>qmldir</file>
         <file>CityDelegate.qml</file>
         <file>DButton.qml</file>
         <file>DPage.qml</file>
@@ -96,5 +97,6 @@
         <file>assets/ic_back.png</file>
         <file>assets/ic_step-2-active.png</file>
         <file>assets/comp_clock.png</file>
+        <file>Colors.qml</file>
     </qresource>
 </RCC>
