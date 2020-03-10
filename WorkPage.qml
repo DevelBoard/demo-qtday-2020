@@ -1,9 +1,10 @@
 import QtQuick 2.12
 import QtQuick.Shapes 1.12
 
-DPageSubTitled {
+DPage {
     id: root
-    text: qsTr("Mix the subjects of your standard work day!")
+    subtitle: qsTr("Mix the subjects of your standard work day!")
+    button: ButtonNext { id: next; enabled: root.selected; onClicked: root.nextPageRequested(); }
 
     property bool selected: false
 
@@ -99,13 +100,5 @@ DPageSubTitled {
                 radius: chart.width / 2
             }
         }
-    }
-
-    DButton {
-        y: 368
-        anchors.horizontalCenter: parent.horizontalCenter
-        enabled: root.selected
-        source: enabled ? "assets/btn/btn_next-active.png" : "assets/btn/btn_next-disable.png"
-        onClicked: root.nextPageRequested()
     }
 }

@@ -17,20 +17,8 @@ DPage {
         onTriggered: { loadingGif.visible = false; }
     }
 
-    DText {
-        y: 188
-        anchors.horizontalCenter: parent.horizontalCenter
-        text: "Check out your mail box\nand get your own Qt playlist in Spotify!"
-        font.pixelSize: 28
-        lineHeight: 1.2
-    }
-
-    DButton {
-        y: 312
-        anchors.horizontalCenter: parent.horizontalCenter
-        source: "assets/btn/btn_thanks.png"
-        onClicked: root.nextPageRequested()
-    }
+    contentIsText: qsTr("Check out your mail box\nand get your own Qt playlist in Spotify!\n")
+    button: ButtonThanks { id: thanks; y: -56; onClicked: root.nextPageRequested(); }
 
     DText {
         width: contentWidth * 3

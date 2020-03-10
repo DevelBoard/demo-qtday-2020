@@ -1,9 +1,10 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-DPageSubTitled {
+DPage {
     id: root
-    text: qsTr("What do you do in your free time?")
+    subtitle: qsTr("What do you do in your free time?")
+    button: ButtonNext { id: next; enabled: root.selected; onClicked: root.nextPageRequested(); }
 
     property bool selected: false
     property alias bycicleSelected: bycicle.selected
@@ -51,13 +52,5 @@ DPageSubTitled {
             SportDelegate { id: swimming; baseSource: "assets/sports/ic_swimming"; onClicked: { root.selected = true; } }
             SportDelegate { id: tennis; baseSource: "assets/sports/ic_tennis"; onClicked: { root.selected = true; } }
         }
-    }
-
-    DButton {
-        y: 368
-        anchors.horizontalCenter: parent.horizontalCenter
-        enabled: root.selected
-        source: enabled ? "assets/btn/btn_next-active.png" : "assets/btn/btn_next-disable.png"
-        onClicked: root.nextPageRequested()
     }
 }

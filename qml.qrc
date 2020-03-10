@@ -4,8 +4,6 @@
         <file>CityDelegate.qml</file>
         <file>DButton.qml</file>
         <file>DPage.qml</file>
-        <file>DPageSubTitled.qml</file>
-        <file>DPageTitled.qml</file>
         <file>DText.qml</file>
         <file>DTextThin.qml</file>
         <file>Keyboard.qml</file>

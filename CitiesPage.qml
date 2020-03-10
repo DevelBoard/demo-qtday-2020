@@ -1,10 +1,11 @@
 import QtQuick 2.12
 
-DPageSubTitled {
+DPage {
     id: root
 
-    text: qsTr("Your ideal capital city you would live in?");
-    readonly property bool selected: Boolean(city)
+    subtitle: qsTr("Your ideal capital city you would live in?");
+    button: ButtonNext { id: next; enabled: Boolean(city); onClicked: root.nextPageRequested(); }
+
     property string city: ""
 
     function reset() { cityList.currentIndex = 0; city = ""; }
@@ -44,13 +45,5 @@ DPageSubTitled {
 
         onVisibleChanged: { if (visible && !root.selected) currentIndex = 5; }
         onDragEnded: { root.city = citiesModel.get(currentIndex).city; }
-    }
-
-    DButton {
-        y: 368
-        anchors.horizontalCenter: parent.horizontalCenter
-        enabled: root.selected
-        source: enabled ? "assets/btn/btn_next-active.png" : "assets/btn/btn_next-disable.png"
-        onClicked: root.nextPageRequested()
     }
 }

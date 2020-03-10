@@ -1,11 +1,11 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-DPageSubTitled {
+DPage {
     id: root
-    text: qsTr("Your way to move in a work day?")
+    subtitle: qsTr("Your way to move in a work day?")
+    button: ButtonNext { id: next; enabled: Boolean(transport) && selectedDistance; onClicked: root.nextPageRequested(); }
 
-    readonly property bool selected: Boolean(transport) && selectedDistance
     property bool selectedDistance: false
     property string transport: ""
     readonly property int distance: Math.floor(slider.value)
@@ -124,13 +124,5 @@ DPageSubTitled {
         }
         onVisibleChanged: { if (!root.selectedDistance) value = 0; }
         onMoved: { root.selectedDistance = true; }
-    }
-
-    DButton {
-        y: 368
-        anchors.horizontalCenter: parent.horizontalCenter
-        enabled: root.selected
-        source: enabled ? "assets/btn/btn_next-active.png" : "assets/btn/btn_next-disable.png"
-        onClicked: root.nextPageRequested()
     }
 }
