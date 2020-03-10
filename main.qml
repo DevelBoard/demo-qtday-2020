@@ -42,7 +42,7 @@ ApplicationWindow {
 
         onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
         states: State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
-        transitions: Transition { NumberAnimation { properties: "opacity"; } }
+        transitions: Transition { OpacityAnimator { target: layout } }
 
         StartPage { id: startPage; }
         RolesPage { id: rolesPage; }
