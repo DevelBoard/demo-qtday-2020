@@ -53,9 +53,11 @@ ApplicationWindow {
         CitiesPage { id: citiesPage; }
         TransportsPage { id: transportsPage; }
         SportsPage { id: sportsPage; }
-        LoadPage { id: loadPage; }
+        LoadPage { id: loadPage_2; }
 
         WorkPage { id: workPage; backButtonRequired: false; }
+        LoadPage { id: loadPage_3; }
+
         FinalPage { id: finalPage; }
     }
     DButton {

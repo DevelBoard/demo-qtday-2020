@@ -3,20 +3,6 @@ import QtQuick 2.12
 DPage {
     id: root
     backButtonRequired: false
-    onVisibleChanged: { loadingGif.visible = true; if (visible) triggerNextPageTimer.start(); }
-
-    AnimatedImage {
-        id: loadingGif
-        y: 72
-        anchors.horizontalCenter: parent.horizontalCenter
-        source: "assets/loading.gif"
-    }
-    Timer {
-        id: triggerNextPageTimer
-        interval: 2000
-        onTriggered: { loadingGif.visible = false; }
-    }
-
     contentIsText: qsTr("Check out your mail box\nand get your own Qt playlist in Spotify!\n")
     button: ButtonThanks { id: thanks; y: -56; onClicked: root.nextPageRequested(); }
 
