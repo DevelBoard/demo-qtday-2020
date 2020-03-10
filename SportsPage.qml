@@ -6,7 +6,6 @@ DPage {
     subtitle: qsTr("What do you do in your free time?")
     button: ButtonNext { id: next; enabled: root.selected; onClicked: root.nextPageRequested(); }
 
-    property bool selected: false
     property alias bycicleSelected: bycicle.selected
     property alias crossfitSelected: crossfit.selected
     property alias gymSelected: gym.selected
@@ -15,9 +14,11 @@ DPage {
     property alias surfSelected: surf.selected
     property alias swimmingSelected: swimming.selected
     property alias tennisSelected: tennis.selected
+    readonly property bool selected: bycicleSelected  || crossfitSelected || gymSelected  ||
+                                     runningSelected  || soccerSelected   || surfSelected ||
+                                                swimmingSelected || tennisSelected
 
     function reset() {
-        selected = false;
         bycicleSelected = false;
         crossfitSelected = false;
         gymSelected = false;
@@ -35,22 +36,22 @@ DPage {
         Row {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: 8
-            SportDelegate { id: bycicle; baseSource: "assets/sports/ic_bycicle"; onClicked: { root.selected = true; } }
-            SportDelegate { id: crossfit; baseSource: "assets/sports/ic_crossfit"; onClicked: { root.selected = true; } }
-            SportDelegate { id: gym; baseSource: "assets/sports/ic_gym"; onClicked: { root.selected = true; } }
+            SportDelegate { id: bycicle; baseSource: "assets/sports/ic_bycicle"; }
+            SportDelegate { id: crossfit; baseSource: "assets/sports/ic_crossfit"; }
+            SportDelegate { id: gym; baseSource: "assets/sports/ic_gym"; }
         }
         Row {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: 8
-            SportDelegate { id: running; baseSource: "assets/sports/ic_running"; onClicked: { root.selected = true; } }
-            SportDelegate { id: soccer; baseSource: "assets/sports/ic_soccer"; onClicked: { root.selected = true; } }
-            SportDelegate { id: surf; baseSource: "assets/sports/ic_surf"; onClicked: { root.selected = true; } }
+            SportDelegate { id: running; baseSource: "assets/sports/ic_running"; }
+            SportDelegate { id: soccer; baseSource: "assets/sports/ic_soccer"; }
+            SportDelegate { id: surf; baseSource: "assets/sports/ic_surf"; }
         }
         Row {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: 8
-            SportDelegate { id: swimming; baseSource: "assets/sports/ic_swimming"; onClicked: { root.selected = true; } }
-            SportDelegate { id: tennis; baseSource: "assets/sports/ic_tennis"; onClicked: { root.selected = true; } }
+            SportDelegate { id: swimming; baseSource: "assets/sports/ic_swimming"; }
+            SportDelegate { id: tennis; baseSource: "assets/sports/ic_tennis"; }
         }
     }
 }
