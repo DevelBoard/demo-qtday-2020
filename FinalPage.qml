@@ -41,10 +41,9 @@ DPage {
         id: creditsPage
         visible: false
 
-        DButton {
+        ButtonClose {
             x: 736
             y: 24
-            source: "assets/ic_close.png"
             onClicked: { creditsPage.visible = false; }
         }
     }
