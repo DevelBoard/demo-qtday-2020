@@ -21,7 +21,7 @@ DPageStep {
         DText {
             x: 16
             anchors.verticalCenter: parent.verticalCenter
-            text: qsTr("select your role")
+            text: qsTr("Select your role")
             color: Colors.white
         }
         Image {
