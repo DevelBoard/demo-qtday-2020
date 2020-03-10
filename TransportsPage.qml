@@ -49,18 +49,11 @@ DPage {
         onVisibleChanged: { if (visible && !root.selectedTransport) currentIndex = 4; }
         onDragEnded: { root.transport = transportsModel.get(currentIndex).transport; }
     }
-    Rectangle {
-        width: 160
-        height: 160
-        radius: 80
+    Image {
         y: 104
         anchors.right: parent.right
         anchors.rightMargin: 96
-        gradient: Gradient {
-                GradientStop { position: 1.0; color: Colors.blue }
-                GradientStop { position: 0.0; color: Colors.lightblue }
-        }
-
+        source: "assets/ic_gradient.png"
         Row {
             height: textValue.height
             anchors.centerIn: parent
