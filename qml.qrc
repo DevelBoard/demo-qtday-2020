@@ -32,6 +32,17 @@
         <file>WorkDelegate.qml</file>
         <file>WorkActivityShapePath.qml</file>
         <file>CreditsPage.qml</file>
+        <file>Colors.qml</file>
+        <file>ButtonNext.qml</file>
+        <file>ButtonStart.qml</file>
+        <file>ButtonBack.qml</file>
+        <file>Title.qml</file>
+        <file>ButtonClose.qml</file>
+        <file>ButtonThanks.qml</file>
+        <file>LoadingImage.qml</file>
+        <file>ButtonCancel.qml</file>
+        <file>ButtonReset.qml</file>
+        <file>PopupReset.qml</file>
         <file>assets/loading.gif</file>
         <file>assets/sports/ic_swimming-disable.png</file>
         <file>assets/sports/ic_running-active.png</file>
@@ -102,6 +113,5 @@
         <file>assets/pop-up/ic_reset-active.png</file>
         <file>assets/pop-up/bg_pop-up.png</file>
         <file>assets/comp_clock.png</file>
-        <file>Colors.qml</file>
     </qresource>
 </RCC>
