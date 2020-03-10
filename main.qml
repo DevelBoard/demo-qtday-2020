@@ -30,6 +30,7 @@ ApplicationWindow {
         property int nextIndex: 0
 
         function reset() {
+            layout.nextIndex = 0;
             rolesPage.reset();
             namePage.reset();
             mailPage.reset();
