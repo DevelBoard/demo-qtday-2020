@@ -72,14 +72,14 @@
         <file>assets/cities/ic_barcellona.png</file>
         <file>assets/cities/ic_paris.png</file>
         <file>assets/cities/ic_beijing-disable.png</file>
-        <file>assets/btn/btn_thanks_pressed.png</file>
+        <file>assets/btn/btn_thanks-pressed.png</file>
+        <file>assets/btn/btn_thanks-disable.png</file>
         <file>assets/btn/btn_next-active.png</file>
-        <file>assets/btn/btn_thanks_disable.png</file>
         <file>assets/btn/btn_next-disable.png</file>
         <file>assets/btn/btn_start-pressed.png</file>
         <file>assets/btn/btn_next-pressed.png</file>
+        <file>assets/btn/btn_thanks-active.png</file>
         <file>assets/btn/btn_start-active.png</file>
-        <file>assets/btn/btn_thanks.png</file>
         <file>assets/btn/btn_start-disable.png</file>
         <file>assets/ic_timeline_tick.png</file>
         <file>assets/ic_step-1-active.png</file>
