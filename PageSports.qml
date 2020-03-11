@@ -36,22 +36,22 @@ DPage {
         Row {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: 8
-            SportDelegate { id: bycicle; baseSource: "assets/sports/ic_bycicle"; }
-            SportDelegate { id: crossfit; baseSource: "assets/sports/ic_crossfit"; }
-            SportDelegate { id: gym; baseSource: "assets/sports/ic_gym"; }
+            DelegateSport { id: bycicle; baseSource: "assets/sports/ic_bycicle"; }
+            DelegateSport { id: crossfit; baseSource: "assets/sports/ic_crossfit"; }
+            DelegateSport { id: gym; baseSource: "assets/sports/ic_gym"; }
         }
         Row {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: 8
-            SportDelegate { id: running; baseSource: "assets/sports/ic_running"; }
-            SportDelegate { id: soccer; baseSource: "assets/sports/ic_soccer"; }
-            SportDelegate { id: surf; baseSource: "assets/sports/ic_surf"; }
+            DelegateSport { id: running; baseSource: "assets/sports/ic_running"; }
+            DelegateSport { id: soccer; baseSource: "assets/sports/ic_soccer"; }
+            DelegateSport { id: surf; baseSource: "assets/sports/ic_surf"; }
         }
         Row {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: 8
-            SportDelegate { id: swimming; baseSource: "assets/sports/ic_swimming"; }
-            SportDelegate { id: tennis; baseSource: "assets/sports/ic_tennis"; }
+            DelegateSport { id: swimming; baseSource: "assets/sports/ic_swimming"; }
+            DelegateSport { id: tennis; baseSource: "assets/sports/ic_tennis"; }
         }
     }
 }

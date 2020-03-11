@@ -35,7 +35,7 @@ DPage {
             ListElement { city: "barcellona" }
             ListElement { city: "moscow" }
         }
-        delegate: CityDelegate {
+        delegate: DelegateCity {
             source: "assets/cities/ic_" + city + (ListView.isCurrentItem ? ".png" : "-disable.png")
             onClicked: {
                 cityList.currentIndex = index;

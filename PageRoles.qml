@@ -53,7 +53,7 @@ DPage {
             enabled: opacity === 1.0
             clip: true
             model: rolesModel
-            delegate: RoleDelegate {
+            delegate: DelegateRole {
                 roleName: qsTr(model.role)
                 selected: containsPress || root.role === model.role
                 onClicked: {

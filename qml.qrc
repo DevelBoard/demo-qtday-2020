@@ -1,33 +1,33 @@
 <RCC>
     <qresource prefix="/">
         <file>qmldir</file>
-        <file>CityDelegate.qml</file>
+        <file>DelegateCity.qml</file>
         <file>DButton.qml</file>
         <file>DPage.qml</file>
         <file>DText.qml</file>
         <file>DTextThin.qml</file>
-        <file>Keyboard.qml</file>
+        <file>DInputPanel.qml</file>
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
-        <file>StartPage.qml</file>
-        <file>DescribeYourselfPage.qml</file>
-        <file>CitiesPage.qml</file>
-        <file>TransportsPage.qml</file>
-        <file>SportsPage.qml</file>
-        <file>WorkPage.qml</file>
-        <file>FinalPage.qml</file>
-        <file>RolesPage.qml</file>
-        <file>RoleDelegate.qml</file>
-        <file>MailPage.qml</file>
-        <file>NamePage.qml</file>
+        <file>PageStart.qml</file>
+        <file>PageDescribeYourself.qml</file>
+        <file>PageCities.qml</file>
+        <file>PageTransports.qml</file>
+        <file>PageSports.qml</file>
+        <file>PageWork.qml</file>
+        <file>PageFinal.qml</file>
+        <file>PageRoles.qml</file>
+        <file>DelegateRole.qml</file>
+        <file>PageMail.qml</file>
+        <file>PageName.qml</file>
         <file>DLine.qml</file>
         <file>DTextField.qml</file>
-        <file>LoadPage.qml</file>
-        <file>TransportDelegate.qml</file>
-        <file>SportDelegate.qml</file>
-        <file>WorkDelegate.qml</file>
+        <file>PageLoad.qml</file>
+        <file>DelegateTransport.qml</file>
+        <file>DelegateSport.qml</file>
+        <file>DelegateWork.qml</file>
         <file>WorkActivityShapePath.qml</file>
-        <file>CreditsPage.qml</file>
+        <file>PageCredits.qml</file>
         <file>Colors.qml</file>
         <file>ButtonNext.qml</file>
         <file>ButtonStart.qml</file>
@@ -35,7 +35,7 @@
         <file>Title.qml</file>
         <file>ButtonClose.qml</file>
         <file>ButtonThanks.qml</file>
-        <file>LoadingImage.qml</file>
+        <file>DImageLoading.qml</file>
         <file>ButtonCancel.qml</file>
         <file>ButtonReset.qml</file>
         <file>PopupReset.qml</file>

@@ -37,7 +37,7 @@ DPage {
             ListElement { transport: QT_TR_NOOP("Train") }
             ListElement { transport: QT_TR_NOOP("Tram") }
         }
-        delegate: TransportDelegate {
+        delegate: DelegateTransport {
             width: transportsList.width
             selected: PathView.isCurrentItem
             text: qsTr(transport)

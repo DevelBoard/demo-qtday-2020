@@ -1,7 +1,7 @@
 DPage {
     id: root
 
-    LoadingImage {
+    DImageLoading {
         anchors.centerIn: parent
         onEnded: root.nextPageRequested()
     }

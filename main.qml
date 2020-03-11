@@ -31,39 +31,39 @@ ApplicationWindow {
 
         function reset() {
             layout.nextIndex = 0;
-            rolesPage.reset();
-            namePage.reset();
-            mailPage.reset();
-            citiesPage.reset();
-            transportsPage.reset();
-            sportsPage.reset();
-            workPage.reset();
+            pageRoles.reset();
+            pageName.reset();
+            pageMail.reset();
+            pageCities.reset();
+            pageTransports.reset();
+            pageSports.reset();
+            pageWork.reset();
         }
 
         opacity: 1.0
         onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
+        PageStart { id: pageStart; }
+        PageRoles { id: pageRoles; backButtonRequired: false; }
+        PageName { id: pageName; }
+        PageMail { id: pageMail; }
+        PageLoad { id: pageLoad_1; stepsBarRequired: true; titleRequired: false; }
+
+        PageDescribeYourself { id: pageDescribeYourself; backButtonRequired: false; }
+        PageCities { id: pageCities; }
+        PageTransports { id: pageTransports; }
+        PageSports { id: pageSports; }
+        PageLoad { id: pageLoad_2; }
+
+        PageWork { id: pageWork; backButtonRequired: false; }
+        PageLoad { id: pageLoad_3; }
+
+        PageFinal { id: pageFinal; }
+
         states: [
             State { when: layout.nextIndex === layout.currentIndex; PropertyChanges { target: layout; opacity: 1.0; } },
             State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
         ]
         transitions: Transition { OpacityAnimator { target: layout } }
-
-        StartPage { id: startPage; }
-        RolesPage { id: rolesPage; backButtonRequired: false; }
-        NamePage { id: namePage; }
-        MailPage { id: mailPage; }
-        LoadPage { id: loadPage_1; stepsBarRequired: true; titleRequired: false; }
-
-        DescribeYourselfPage { id: describeYourselfPage; backButtonRequired: false; }
-        CitiesPage { id: citiesPage; }
-        TransportsPage { id: transportsPage; }
-        SportsPage { id: sportsPage; }
-        LoadPage { id: loadPage_2; }
-
-        WorkPage { id: workPage; backButtonRequired: false; }
-        LoadPage { id: loadPage_3; }
-
-        FinalPage { id: finalPage; }
     }
 
 //  ---- Overlay elements
@@ -80,9 +80,9 @@ ApplicationWindow {
         anchors.verticalCenter: backButton.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         show: layout.currentPage.stepsBarRequired
-        textStep_1: rolesPage.role
-        textStep_2: namePage.name
-        textStep_3: mailPage.mail
+        textStep_1: pageRoles.role
+        textStep_2: pageName.name
+        textStep_3: pageMail.mail
         step: layout.currentIndex
     }
     Title {
@@ -91,7 +91,7 @@ ApplicationWindow {
         anchors.horizontalCenter: parent.horizontalCenter
         show: layout.currentPage.titleRequired
     }
-    Keyboard {
+    DInputPanel {
         id: keyboard
         width: parent.width
         anchors.bottomMargin: -28
