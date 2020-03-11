@@ -99,6 +99,7 @@ ApplicationWindow {
         show: layout.currentPage.keyboardRequired && !resetPopup.visible
     }
     PopupReset { id: resetPopup; anchors.centerIn: parent; onReset: layout.reset(); }
+    DDrawer { width: window.width; height: window.height; }
 
 //  ---- Connections
     Connections {

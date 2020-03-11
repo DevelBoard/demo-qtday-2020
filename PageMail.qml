@@ -29,6 +29,15 @@ DPage {
                 height: parent.height
                 placeholderText: qsTr(" john.smith")
                 inputMethodHints: Qt.ImhEmailCharactersOnly
+                font.pixelSize: {
+                    if (text.length > 26)
+                        return 12;
+                    if (text.length > 18)
+                        return 14;
+                    if (text.length > 12)
+                        return 18;
+                    return 24;
+                }
                 onVisibleChanged: { if (visible) forceActiveFocus(); }
                 onAccepted: {
                     if (!mailDomainText.isValid)
@@ -49,6 +58,15 @@ DPage {
                 height: parent.height
                 placeholderText: " mail.com"
                 inputMethodHints: Qt.ImhEmailCharactersOnly
+                font.pixelSize: {
+                    if (text.length > 26)
+                        return 12;
+                    if (text.length > 18)
+                        return 14;
+                    if (text.length > 12)
+                        return 18;
+                    return 24;
+                }
 
                 readonly property bool isValid: text.indexOf(".") > 0 && text.length > text.indexOf(".") + 2
 
