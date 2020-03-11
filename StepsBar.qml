@@ -31,16 +31,12 @@ Row {
                 return "assets/ic_timeline_tick.png";
             }
         }
-        DText {
+        DTextStep {
             id: step_1
             visible: root.step > 1
             anchors.top: parent.bottom
             anchors.topMargin: 8
             anchors.horizontalCenter: parent.horizontalCenter
-            color: Colors.green
-            font.pixelSize: 10
-            font.letterSpacing: 1.2
-            font.capitalization: Font.AllUppercase
         }
     }
     DLine {
@@ -62,16 +58,12 @@ Row {
                 return "assets/ic_timeline_tick.png";
             }
         }
-        DText {
+        DTextStep {
             id: step_2
             visible: root.step > 2
             anchors.top: parent.bottom
             anchors.topMargin: 8
             anchors.horizontalCenter: parent.horizontalCenter
-            color: Colors.green
-            font.pixelSize: 10
-            font.letterSpacing: 1.2
-            font.capitalization: Font.AllUppercase
         }
     }
     DLine {
@@ -93,16 +85,12 @@ Row {
                 return "assets/ic_timeline_tick.png";
             }
         }
-        DText {
+        DTextStep {
             id: step_3
             visible: root.step > 3
             anchors.top: parent.bottom
             anchors.topMargin: 8
             anchors.horizontalCenter: parent.horizontalCenter
-            color: Colors.green
-            font.pixelSize: 10
-            font.letterSpacing: 1.2
-            font.capitalization: Font.AllUppercase
         }
     }
 }

@@ -41,6 +41,7 @@
         <file>PopupReset.qml</file>
         <file>StepsBar.qml</file>
         <file>DImage.qml</file>
+        <file>DTextStep.qml</file>
         <file>assets/loading.gif</file>
         <file>assets/sports/ic_swimming-disable.png</file>
         <file>assets/sports/ic_running-active.png</file>
