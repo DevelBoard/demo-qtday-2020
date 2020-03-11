@@ -71,6 +71,7 @@ ApplicationWindow {
         id: backButton
         x: 24
         y: 24
+        enabled: layout.nextIndex === layout.currentIndex && show
         show: layout.currentPage.backButtonRequired
         onClicked: { layout.nextIndex--; }
     }
