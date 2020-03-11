@@ -38,7 +38,6 @@ Slider {
     handle: Image {
         x: root.leftPadding + root.visualPosition * root.availableWidth - width / 2
         anchors.verticalCenter: root.verticalCenter
-        anchors.verticalCenterOffset: 6
         source: "assets/ic_handle-bar.png"
     }
 
