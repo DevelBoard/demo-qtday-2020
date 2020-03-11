@@ -28,7 +28,7 @@ DPageStep {
                 height: parent.height
                 placeholderText: qsTr(" john.smith")
                 inputMethodHints: Qt.ImhEmailCharactersOnly
-                onVisibleChanged: { if (visible && !text) forceActiveFocus(); }
+                onVisibleChanged: { if (visible) forceActiveFocus(); }
                 onAccepted: {
                     if (!mailDomainText.isValid)
                         mailDomainText.focus = true;
