@@ -19,18 +19,17 @@ DPage {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: { pageCredits.visible = true; }
+            onClicked: { pageCredits.show = true; }
         }
     }
 
     PageCredits {
         id: pageCredits
-        visible: false
 
         ButtonClose {
             x: 736
             y: 24
-            onClicked: { pageCredits.visible = false; }
+            onClicked: { pageCredits.show = false; }
         }
     }
 }

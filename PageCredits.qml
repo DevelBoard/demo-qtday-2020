@@ -1,11 +1,21 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-DPage {
+Image {
     id: root
-    background: Image { source: "assets/develboard_bg-1.png" }
+    enabled: show
+    opacity: 0.0
+    source: "assets/develboard_bg-1.png"
 
-    onVisibleChanged: { if (!visible) flickable.contentY = 0; }
+    property bool show: false
+
+    onOpacityChanged: { if (!opacity) flickable.contentY = 0; }
+
+    transitions: Transition { OpacityAnimator { target: root; duration: 500; } }
+    states: [
+        State { when: !root.show; PropertyChanges { target: root; opacity: 0.0; } },
+        State { when: root.show; PropertyChanges { target: root; opacity: 1.0; } }
+    ]
 
     Flickable {
         id: flickable
@@ -65,6 +75,4 @@ DPage {
             }
         }
     }
-
-
 }
