@@ -7,7 +7,7 @@ DPageStep {
 
     readonly property string mail: mailNameText.text + "@" + mailDomainText.text
 
-    function reset() { mailNameText.text = ""; mailDomainText.text = ""; }
+    function reset() { mailNameText.text = ""; mailDomainText.text = ""; mailDomainText.colorOverride = ""; }
 
     Column {
         y: 144
@@ -52,12 +52,13 @@ DPageStep {
                 readonly property bool isValid: text.indexOf(".") > 0 && text.length > text.indexOf(".") + 2
 
                 onAccepted: {
+                    colorOverride = !text || isValid ? "" : Colors.red;
                     if (!mailNameText.text)
                         mailNameText.focus = true;
                     else if (isValid)
                         root.nextPageRequested();
                 }
-                colorOverride: (Boolean(text) && !isValid) ? Colors.red : ""
+                onTextChanged: { if (!text) colorOverride = ""; }
             }
         }
     }
