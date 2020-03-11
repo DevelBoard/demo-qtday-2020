@@ -47,7 +47,7 @@ ApplicationWindow {
         PageMail { id: pageMail; }
         PageLoad { id: pageLoad_1; stepsBarRequired: true; titleRequired: false; }
 
-        PageDescribeYourself { id: pageDescribeYourself; backButtonRequired: false; }
+        PageDescribeYourself { id: pageDescribeYourself; backButtonRequired: false; textStep_1: pageRoles.role; textStep_2: pageName.name; textStep_3: pageMail.mail; }
         PageCities { id: pageCities; }
         PageTransports { id: pageTransports; }
         PageSports { id: pageSports; }
