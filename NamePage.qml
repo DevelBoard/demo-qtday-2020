@@ -1,9 +1,10 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-DPageStep {
+DPage {
     id:root
-    step: 2
+    stepsBarRequired: true
+    titleRequired: false
     keyboardRequired: true
 
     property alias name: nameTextField.text

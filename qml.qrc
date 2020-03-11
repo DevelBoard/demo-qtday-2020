@@ -17,14 +17,12 @@
         <file>WorkPage.qml</file>
         <file>FinalPage.qml</file>
         <file>RolesPage.qml</file>
-        <file>DPageStep.qml</file>
         <file>RoleDelegate.qml</file>
         <file>MailPage.qml</file>
         <file>NamePage.qml</file>
         <file>DLine.qml</file>
         <file>DTextField.qml</file>
         <file>LoadPage.qml</file>
-        <file>LoadPageStep.qml</file>
         <file>TransportDelegate.qml</file>
         <file>SportDelegate.qml</file>
         <file>WorkDelegate.qml</file>

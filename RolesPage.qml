@@ -1,8 +1,9 @@
 import QtQuick 2.12
 
-DPageStep {
+DPage {
     id: root
-    step: 1
+    stepsBarRequired: true
+    titleRequired: false
 
     property string role: ""
     property bool showList: false

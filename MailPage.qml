@@ -1,8 +1,9 @@
 import QtQuick 2.12
 
-DPageStep {
+DPage {
     id: root
-    step: 3
+    stepsBarRequired: true
+    titleRequired: false
     keyboardRequired: true
 
     readonly property string mail: mailNameText.text + "@" + mailDomainText.text

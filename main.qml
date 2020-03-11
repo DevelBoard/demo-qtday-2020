@@ -50,9 +50,9 @@ ApplicationWindow {
 
         StartPage { id: startPage; }
         RolesPage { id: rolesPage; }
-        NamePage { id: namePage; textStep_1: rolesPage.role; }
-        MailPage { id: mailPage; textStep_1: rolesPage.role; textStep_2: namePage.name; }
-        LoadPageStep { id: loadPage_1; textStep_1: rolesPage.role; textStep_2: namePage.name; textStep_3: mailPage.mail; }
+        NamePage { id: namePage; }
+        MailPage { id: mailPage; }
+        LoadPage { id: loadPage_1; stepsBarRequired: true; titleRequired: false; }
 
         DescribeYourselfPage { id: describeYourselfPage; backButtonRequired: false; }
         CitiesPage { id: citiesPage; }
