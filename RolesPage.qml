@@ -9,8 +9,9 @@ DPageStep {
 
     function reset() { role = ""; showList = false; }
 
-    content: Column {
-        y: 30
+    Column {
+        y: 144
+        anchors.horizontalCenter: parent.horizontalCenter
         DTextThin {
             id: field
             anchors.left: dropDownButton.left
