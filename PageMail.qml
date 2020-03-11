@@ -7,6 +7,10 @@ DPage {
     keyboardRequired: true
 
     readonly property string mail: mailNameText.text + "@" + mailDomainText.text
+    readonly property string mailShort: "..." + mailNameShort + "@" + mailDomainText.text
+    readonly property alias mailName: mailNameText.text
+    readonly property string mailNameShort: mailName.length <= 3 ? mailName : mailName.substr(mailName.length - 3, 3)
+    readonly property alias mailDomain: mailDomainText.text
 
     function reset() { mailNameText.text = ""; mailDomainText.text = ""; mailDomainText.colorOverride = ""; }
 

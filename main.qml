@@ -47,7 +47,7 @@ ApplicationWindow {
         PageMail { id: pageMail; }
         PageLoad { id: pageLoad_1; stepsBarRequired: true; titleRequired: false; }
 
-        PageDescribeYourself { id: pageDescribeYourself; backButtonRequired: false; textStep_1: pageRoles.role; textStep_2: pageName.name; textStep_3: pageMail.mail; }
+        PageDescribeYourself { id: pageDescribeYourself; backButtonRequired: false; textStep_1: pageRoles.role; textStep_2: pageName.name; textStep_3: pageMail.mailShort; }
         PageCities { id: pageCities; }
         PageTransports { id: pageTransports; }
         PageSports { id: pageSports; }
@@ -81,7 +81,7 @@ ApplicationWindow {
         show: layout.currentPage.stepsBarRequired
         textStep_1: pageRoles.role
         textStep_2: pageName.name
-        textStep_3: pageMail.mail
+        textStep_3: pageMail.mailShort
         step: layout.currentIndex
     }
     DTitle {
