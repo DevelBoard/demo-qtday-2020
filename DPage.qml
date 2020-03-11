@@ -7,6 +7,7 @@ Page {
 
     property bool backButtonRequired: true
     property bool keyboardRequired: false
+    property bool stepsBarRequired: false
     property bool titleRequired: true
     property alias textContent: textContent.text
     property alias subtitle: subtitle.text

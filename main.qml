@@ -74,6 +74,16 @@ ApplicationWindow {
         show: layout.currentPage.backButtonRequired
         onClicked: { layout.nextIndex--; }
     }
+    StepsBar {
+        id: stepsBar
+        anchors.verticalCenter: backButton.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        show: layout.currentPage.stepsBarRequired
+        textStep_1: rolesPage.role
+        textStep_2: namePage.name
+        textStep_3: mailPage.mail
+        step: layout.currentIndex
+    }
     Title {
         id: title
         anchors.verticalCenter: backButton.verticalCenter
