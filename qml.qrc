@@ -32,7 +32,7 @@
         <file>ButtonNext.qml</file>
         <file>ButtonStart.qml</file>
         <file>ButtonBack.qml</file>
-        <file>Title.qml</file>
+        <file>DTitle.qml</file>
         <file>ButtonClose.qml</file>
         <file>ButtonThanks.qml</file>
         <file>DImageLoading.qml</file>

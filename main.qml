@@ -84,7 +84,7 @@ ApplicationWindow {
         textStep_3: pageMail.mail
         step: layout.currentIndex
     }
-    Title {
+    DTitle {
         id: title
         anchors.verticalCenter: backButton.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
