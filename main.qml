@@ -28,7 +28,6 @@ ApplicationWindow {
         onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
 
         readonly property DPage currentPage: children[layout.currentIndex]
-        readonly property DPage nextPage: children[layout.nextIndex]
         property int nextIndex: 0
 
         function reset() {
@@ -97,7 +96,7 @@ ApplicationWindow {
         anchors.bottomMargin: -28
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        show: layout.nextPage.keyboardRequired && !resetPopup.visible
+        show: layout.currentPage.keyboardRequired && !resetPopup.visible
     }
     PopupReset { id: resetPopup; anchors.centerIn: parent; onReset: layout.reset(); }
 
