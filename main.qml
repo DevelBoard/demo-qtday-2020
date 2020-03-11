@@ -110,7 +110,7 @@ ApplicationWindow {
                 layout.reset();
         }
         onPopupRequested: {
-            if (layout.currentIndex !== 0)
+            if (layout.currentIndex !== 0 && layout.currentIndex !== layout.count - 1)
                 resetPopup.open();
         }
     }
