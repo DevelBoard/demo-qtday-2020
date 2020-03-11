@@ -84,7 +84,7 @@ ApplicationWindow {
         anchors.horizontalCenter: parent.horizontalCenter
         show: layout.nextPage.keyboardRequired && !resetPopup.visible
     }
-    PopupReset { id: resetPopup; anchors.centerIn: parent; }
+    PopupReset { id: resetPopup; anchors.centerIn: parent; onReset: layout.reset(); }
 
 //  ---- Connections
     Connections {

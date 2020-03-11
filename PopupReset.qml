@@ -3,6 +3,9 @@ import QtQuick.Controls 2.12
 
 Popup {
     id: root
+
+    signal reset()
+
     closePolicy: Popup.NoAutoClose
     background: Rectangle {
         width: window.width
@@ -25,7 +28,7 @@ Popup {
             anchors.bottomMargin: 7
             spacing: 24
             ButtonCancel { onClicked: root.close(); }
-            ButtonReset { onClicked: { layout.reset(); root.close(); } }
+            ButtonReset { onClicked: { root.reset(); root.close(); } }
         }
     }
     enter: Transition { id: fadeIn; NumberAnimation { property: "opacity"; from: 0.0; to: 1.0; duration: 500; } }
