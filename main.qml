@@ -24,6 +24,8 @@ ApplicationWindow {
         currentIndex: 0
         anchors.fill: parent
         enabled: opacity === 1.0
+        opacity: 1.0
+        onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
 
         readonly property DPage currentPage: children[layout.currentIndex]
         readonly property DPage nextPage: children[layout.nextIndex]
@@ -40,8 +42,6 @@ ApplicationWindow {
             pageWork.reset();
         }
 
-        opacity: 1.0
-        onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
         PageStart { id: pageStart; }
         PageRoles { id: pageRoles; backButtonRequired: false; }
         PageName { id: pageName; }
