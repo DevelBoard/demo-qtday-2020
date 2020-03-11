@@ -49,7 +49,7 @@ ApplicationWindow {
         transitions: Transition { OpacityAnimator { target: layout } }
 
         StartPage { id: startPage; }
-        RolesPage { id: rolesPage; }
+        RolesPage { id: rolesPage; backButtonRequired: false; }
         NamePage { id: namePage; }
         MailPage { id: mailPage; }
         LoadPage { id: loadPage_1; stepsBarRequired: true; titleRequired: false; }
