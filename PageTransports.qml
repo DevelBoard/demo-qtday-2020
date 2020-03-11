@@ -46,7 +46,7 @@ DPage {
                 root.transport = transport;
             }
         }
-        onVisibleChanged: { if (visible && !root.transport) currentIndex = 4; }
+        onVisibleChanged: { if (visible && !root.transport) currentIndex = 1; }
         onDragEnded: { root.transport = transportsModel.get(currentIndex).transport; }
     }
     Image {
