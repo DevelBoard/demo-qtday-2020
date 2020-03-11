@@ -4,14 +4,14 @@ import QtQuick.Controls 2.12
 Popup {
     id: root
     closePolicy: Popup.NoAutoClose
-    dim: true
-    Overlay.modeless: Rectangle {
-        id: dimmingBackground
+    background: Rectangle {
+        width: window.width
+        height: window.height
+        anchors.centerIn: root.contentItem
         color: Colors.transparentblue
-        OpacityAnimator on opacity { target: dimmingBackground; from: !dimmingBackground.opacity; to: dimmingBackground.opacity; duration: 500; running: fadeOut.running || fadeIn.running }
     }
-    background: Image { source: "assets/pop-up/bg_pop-up.png" }
-    contentItem: Item {
+    contentItem: Image {
+        source: "assets/pop-up/bg_pop-up.png"
         DText {
             width: 378
             y: 28
