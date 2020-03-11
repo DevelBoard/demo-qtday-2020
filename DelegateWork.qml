@@ -10,6 +10,16 @@ Slider {
     rightPadding: 20
     value: 0.5
 
+    // Yes, POW is slow.
+    // From a design specification point of view, POW is the mathematically
+    // correct way to display the desired behaviour for sliders compensation.
+    // The most accurate method was chosen since the target doesn't seem to
+    // suffer from POW usage.
+    // An optimized version could leverage a 2nd grade approximation function:
+    // f(x) = 1/3 * x + 2/3 * x^2
+    //
+    // Look at the functions involved at:
+    // https://www.geogebra.org/graphing/a7w4qrsq
     readonly property real exponent: 1.5849625007209
     readonly property real invExponent: 1 / exponent
     readonly property real functionalValue: Math.pow(value, exponent)
