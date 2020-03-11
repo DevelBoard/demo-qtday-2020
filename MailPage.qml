@@ -49,7 +49,7 @@ DPageStep {
                 placeholderText: " mail.com"
                 inputMethodHints: Qt.ImhEmailCharactersOnly
 
-                readonly property bool isValid: text.indexOf(".") > 0 && text.length > text.indexOf(".") + 1
+                readonly property bool isValid: text.indexOf(".") > 0 && text.length > text.indexOf(".") + 2
 
                 onAccepted: {
                     if (!mailNameText.text)
