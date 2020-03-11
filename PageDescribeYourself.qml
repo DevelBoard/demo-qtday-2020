@@ -16,10 +16,11 @@ DPage {
         spacing: 8
         DTextStep {
             id: step_1
-            width: step_3.width
             maximumLineCount: 1
-            elide: Text.ElideRight
+            width: 160
             horizontalAlignment: Text.AlignRight
+            font.pixelSize: 10
+            elide: Text.ElideRight
         }
         Rectangle {
             width: 32
@@ -30,6 +31,8 @@ DPage {
         DTextStep {
             id: step_2
             maximumLineCount: 1
+            width: 160
+            font.pixelSize: 10
             elide: Text.ElideRight
         }
         Rectangle {
@@ -41,6 +44,8 @@ DPage {
         DTextStep {
             id: step_3
             maximumLineCount: 1
+            width: 160
+            font.pixelSize: 10
             elide: Text.ElideRight
         }
     }
