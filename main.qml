@@ -40,8 +40,12 @@ ApplicationWindow {
             workPage.reset();
         }
 
+        opacity: 1.0
         onOpacityChanged: { if(!opacity) currentIndex = nextIndex; }
-        states: State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
+        states: [
+            State { when: layout.nextIndex === layout.currentIndex; PropertyChanges { target: layout; opacity: 1.0; } },
+            State { when: layout.nextIndex !== layout.currentIndex; PropertyChanges { target: layout; opacity: 0.0; } }
+        ]
         transitions: Transition { OpacityAnimator { target: layout } }
 
         StartPage { id: startPage; }
