@@ -6,7 +6,7 @@ MouseArea {
     height: image.height
     property alias source: image.source
 
-    Image {
+    DImage {
         id: image
     }
 }
