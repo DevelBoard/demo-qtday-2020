@@ -56,7 +56,7 @@ DPage {
                 id: mailDomainText
                 width: 212
                 height: parent.height
-                placeholderText: " mail.com"
+                placeholderText: " email.com"
                 inputMethodHints: Qt.ImhEmailCharactersOnly
                 font.pixelSize: {
                     if (text.length > 26)
