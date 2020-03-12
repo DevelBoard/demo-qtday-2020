@@ -18,7 +18,6 @@ DPage {
             id: step_1
             maximumLineCount: 1
             width: 160
-            horizontalAlignment: Text.AlignRight
             font.pixelSize: 10
             elide: Text.ElideRight
         }
