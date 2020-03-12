@@ -39,7 +39,7 @@ Image {
             bottomPadding: topPadding
             leftPadding: 24
             rightPadding: 56
-            spacing: 31
+            spacing: 40
             Text {
                 id: creditsText
                 width: 544
