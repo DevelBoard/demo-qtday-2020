@@ -61,7 +61,7 @@ DPage {
                     root.role = model.role;
                 }
             }
-            transitions: Transition { OpacityAnimator { target: rolesList; duration: 500; } }
+            transitions: Transition { OpacityAnimator { target: rolesList; } }
             states: [
                 State { when: !root.showList; PropertyChanges { target: rolesList; opacity: 0.0; } },
                 State { when: root.showList; PropertyChanges { target: rolesList; opacity: 1.0; } }
