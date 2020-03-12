@@ -1,6 +1,19 @@
 <RCC>
     <qresource prefix="/">
+        <file alias="PageCities.qml">Pages/PageCities.qml</file>
+        <file alias="PageCredits.qml">Pages/PageCredits.qml</file>
+        <file alias="PageDescribeYourself.qml">Pages/PageDescribeYourself.qml</file>
+        <file alias="PageFinal.qml">Pages/PageFinal.qml</file>
+        <file alias="PageLoad.qml">Pages/PageLoad.qml</file>
+        <file alias="PageMail.qml">Pages/PageMail.qml</file>
+        <file alias="PageName.qml">Pages/PageName.qml</file>
+        <file alias="PageRoles.qml">Pages/PageRoles.qml</file>
+        <file alias="PageSports.qml">Pages/PageSports.qml</file>
+		<file alias="PageStart.qml">Pages/PageStart.qml</file>
+        <file alias="PageTransports.qml">Pages/PageTransports.qml</file>
+        <file alias="PageWork.qml">Pages/PageWork.qml</file>
         <file>qmldir</file>
+        <file>DelegateRole.qml</file>
         <file>DelegateCity.qml</file>
         <file>DButton.qml</file>
         <file>DPage.qml</file>
@@ -9,25 +22,12 @@
         <file>DInputPanel.qml</file>
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
-        <file>PageStart.qml</file>
-        <file>PageDescribeYourself.qml</file>
-        <file>PageCities.qml</file>
-        <file>PageTransports.qml</file>
-        <file>PageSports.qml</file>
-        <file>PageWork.qml</file>
-        <file>PageFinal.qml</file>
-        <file>PageRoles.qml</file>
-        <file>DelegateRole.qml</file>
-        <file>PageMail.qml</file>
-        <file>PageName.qml</file>
         <file>DLine.qml</file>
         <file>DTextField.qml</file>
-        <file>PageLoad.qml</file>
         <file>DelegateTransport.qml</file>
         <file>DelegateSport.qml</file>
         <file>DelegateWork.qml</file>
         <file>WorkActivityShapePath.qml</file>
-        <file>PageCredits.qml</file>
         <file>Colors.qml</file>
         <file>ButtonNext.qml</file>
         <file>ButtonStart.qml</file>
