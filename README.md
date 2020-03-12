@@ -3,13 +3,13 @@
 
 Welcome to the repository hosting the code used to build the [Qt 5.12.3](https://www.qt.io/qt-5-12) demo for QtDay 2020, running on the DevelBoard EVA01, made by Develer.</br>
 <img src="https://user-images.githubusercontent.com/26225010/76514866-d912a980-6458-11ea-9eb1-0798c84cbf6f.png" height="400">
-## <a href="https://www.develer.com/"><img src="assets/ic_develer_dark.png" height="23" alt="Develer">
+## <a href="https://www.develer.com/"><img src="assets/ic_develer_dark.png" height="26" alt="Develer">
 </a>
 We partner with your company to create exceptional products, building software and hardware with diligence and passion.</br>
 We are the company behind the development of this demo and the DevelBoard EVA01.</br>
 We are also the organizers of the QtDay 2020 conference.
 
-## <a href="https://www.develboard.com/"><img src="assets/ic_develboard.png" height="23" alt="DevelBoard"></a>
+## <a href="https://www.develboard.com/"><img src="assets/ic_develboard.png" height="24" alt="DevelBoard"></a>
 DevelBoard is a Linux SoM, with unique BSP and software addons. It has a very small form factor, extended temperature range, low power requirements, and a custom BSP with advanced tools, made and maintained by true Linux experts.
 </br>
 ### What is EVA01 ?
