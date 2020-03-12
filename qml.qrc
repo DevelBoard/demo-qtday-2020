@@ -1,5 +1,34 @@
 <RCC>
     <qresource prefix="/">
+        <file alias="ButtonBack.qml">Buttons/ButtonBack.qml</file>
+        <file alias="ButtonCancel.qml">Buttons/ButtonCancel.qml</file>
+        <file alias="ButtonClose.qml">Buttons/ButtonClose.qml</file>
+        <file alias="ButtonNext.qml">Buttons/ButtonNext.qml</file>
+        <file alias="ButtonReset.qml">Buttons/ButtonReset.qml</file>
+        <file alias="ButtonStart.qml">Buttons/ButtonStart.qml</file>
+        <file alias="ButtonThanks.qml">Buttons/ButtonThanks.qml</file>
+
+        <file alias="DButton.qml">DComponents/DButton.qml</file>
+        <file alias="DDrawer.qml">DComponents/DDrawer.qml</file>
+        <file alias="DImage.qml">DComponents/DImage.qml</file>
+        <file alias="DImageLoading.qml">DComponents/DImageLoading.qml</file>
+        <file alias="DInputPanel.qml">DComponents/DInputPanel.qml</file>
+        <file alias="DLine.qml">DComponents/DLine.qml</file>
+        <file alias="DPage.qml">DComponents/DPage.qml</file>
+        <file alias="DStepsBar.qml">DComponents/DStepsBar.qml</file>
+        <file alias="DText.qml">DComponents/DText.qml</file>
+        <file alias="DTextField.qml">DComponents/DTextField.qml</file>
+        <file alias="DTextStep.qml">DComponents/DTextStep.qml</file>
+        <file alias="DTextThin.qml">DComponents/DTextThin.qml</file>
+        <file alias="DTitle.qml">DComponents/DTitle.qml</file>
+        <file alias="DWorkActivityShapePath.qml">DComponents/DWorkActivityShapePath.qml</file>
+
+        <file alias="DelegateCity.qml">Delegates/DelegateCity.qml</file>
+        <file alias="DelegateRole.qml">Delegates/DelegateRole.qml</file>
+        <file alias="DelegateSport.qml">Delegates/DelegateSport.qml</file>
+        <file alias="DelegateTransport.qml">Delegates/DelegateTransport.qml</file>
+        <file alias="DelegateWork.qml">Delegates/DelegateWork.qml</file>
+        
         <file alias="PageCities.qml">Pages/PageCities.qml</file>
         <file alias="PageCredits.qml">Pages/PageCredits.qml</file>
         <file alias="PageDescribeYourself.qml">Pages/PageDescribeYourself.qml</file>
@@ -12,37 +41,13 @@
 		<file alias="PageStart.qml">Pages/PageStart.qml</file>
         <file alias="PageTransports.qml">Pages/PageTransports.qml</file>
         <file alias="PageWork.qml">Pages/PageWork.qml</file>
-        <file>qmldir</file>
-        <file>DelegateRole.qml</file>
-        <file>DelegateCity.qml</file>
-        <file>DButton.qml</file>
-        <file>DPage.qml</file>
-        <file>DText.qml</file>
-        <file>DTextThin.qml</file>
-        <file>DInputPanel.qml</file>
-        <file>main.qml</file>
-        <file>qtquickcontrols2.conf</file>
-        <file>DLine.qml</file>
-        <file>DTextField.qml</file>
-        <file>DelegateTransport.qml</file>
-        <file>DelegateSport.qml</file>
-        <file>DelegateWork.qml</file>
-        <file>WorkActivityShapePath.qml</file>
+        
+        <file alias="PopupReset.qml">Popups/PopupReset.qml</file>
+
         <file>Colors.qml</file>
-        <file>ButtonNext.qml</file>
-        <file>ButtonStart.qml</file>
-        <file>ButtonBack.qml</file>
-        <file>DTitle.qml</file>
-        <file>ButtonClose.qml</file>
-        <file>ButtonThanks.qml</file>
-        <file>DImageLoading.qml</file>
-        <file>ButtonCancel.qml</file>
-        <file>ButtonReset.qml</file>
-        <file>PopupReset.qml</file>
-        <file>StepsBar.qml</file>
-        <file>DImage.qml</file>
-        <file>DTextStep.qml</file>
-        <file>DDrawer.qml</file>
+        <file>main.qml</file>
+        <file>qmldir</file>
+        <file>qtquickcontrols2.conf</file>
         <file>assets/loading.gif</file>
         <file>assets/sports/ic_swimming-disable.png</file>
         <file>assets/sports/ic_running-active.png</file>

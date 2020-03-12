@@ -77,14 +77,14 @@ DPage {
 
             readonly property int strokeWidth: 13
 
-            WorkActivityShapePath {
+            DWorkActivityShapePath {
                 id: shapePath_0
                 end: work_0.functionalValue
                 strokeColor: work_0.color
                 strokeWidth: chart.strokeWidth
                 radius: chart.width / 2
             }
-            WorkActivityShapePath {
+            DWorkActivityShapePath {
                 id: shapePath_1
                 start: shapePath_0.end
                 end: start + work_1.functionalValue
@@ -92,7 +92,7 @@ DPage {
                 strokeWidth: chart.strokeWidth
                 radius: chart.width / 2
             }
-            WorkActivityShapePath {
+            DWorkActivityShapePath {
                 id: shapePath_2
                 start: shapePath_1.end
                 strokeColor: work_2.color

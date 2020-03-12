@@ -74,7 +74,7 @@ ApplicationWindow {
         show: layout.currentPage.backButtonRequired
         onClicked: { layout.nextIndex--; }
     }
-    StepsBar {
+    DStepsBar {
         id: stepsBar
         anchors.verticalCenter: backButton.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
