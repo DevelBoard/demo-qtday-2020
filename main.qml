@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
+import QtQuick.LocalStorage 2.12
 
 ApplicationWindow {
     id: window
@@ -9,6 +10,21 @@ ApplicationWindow {
     height: 480
     title: qsTr("Demo QtDay 2020")
     background: Image { source: "assets/develboard_bg-1.png" }
+
+    function saveUserExperience() {
+        var db = LocalStorage.openDatabaseSync("QtDay2020_DB", "1.0", "A collection of all the entries collected during QtDay 2020.");
+        db.transaction(function(tx) {
+                // Create the database table if it doesn't already exist
+                tx.executeSql('CREATE TABLE IF NOT EXISTS UserExperiences(name TEXT, mail TEXT, role Text, city TEXT, transport TEXT, work_distance INTEGER, bycicle BOOLEAN, crossfit BOOLEAN, gym BOOLEAN, running BOOLEAN, soccer BOOLEAN, surf BOOLEAN, swimming BOOLEAN, tennis BOOLEAN, coding INTEGER, sw_design INTEGER, gaming INTEGER, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, id INTEGER PRIMARY KEY AUTOINCREMENT)');
+                // Add an entry
+                tx.executeSql('INSERT INTO UserExperiences VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [ pageName.name, pageMail.mail, pageRoles.role, pageCities.city, pageTransports.transport, pageTransports.distance, pageSports.bycicleSelected, pageSports.crossfitSelected, pageSports.gymSelected, pageSports.runningSelected, pageSports.soccerSelected, pageSports.surfSelected, pageSports.swimmingSelected, pageSports.tennisSelected, pageWork.coding, pageWork.swDesign, pageWork.gaming ]);
+                // Show all added entries
+                var rs = tx.executeSql('SELECT * FROM UserExperiences');
+                for (var i = 0; i < rs.rows.length; i++)
+                    console.log(JSON.stringify(rs.rows.item(i)))
+            }
+        )
+    }
 
     FontLoader {
         id: mediumFont
@@ -106,8 +122,10 @@ ApplicationWindow {
         target: layout.currentPage
         onNextPageRequested: {
             layout.nextIndex = (layout.currentIndex + 1) % layout.count;
-            if (layout.nextIndex === 0)
+            if (layout.nextIndex === 0) {
+                window.saveUserExperience();
                 layout.reset();
+            }
         }
         onPopupRequested: {
             if (layout.currentIndex !== 0 && layout.currentIndex !== layout.count - 1)
