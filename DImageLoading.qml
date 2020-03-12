@@ -5,9 +5,9 @@ AnimatedImage {
     anchors.centerIn: parent
     source: "assets/loading.gif"
     paused: true
-
+    speed: 4.0
     readonly property int cyclesToPerform: 2
-    readonly property int anticipateEndByNumFrames: 5
+    readonly property int anticipateEndByNumFrames: 10
     readonly property int lastFrame: frameCount - 1
     readonly property int endFrame: lastFrame - anticipateEndByNumFrames
     property int cyclesPerformed: 0
