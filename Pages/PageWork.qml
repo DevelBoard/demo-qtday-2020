@@ -6,6 +6,9 @@ DPage {
     subtitle: qsTr("Mix the subjects of your standard work day!")
     button: ButtonNext { id: next; enabled: root.selected; onClicked: root.nextPageRequested(); }
 
+    readonly property int coding: workCoding.value * 100
+    readonly property int swDesign: workSwDesign.value * 100
+    readonly property int gaming: workGaming.value * 100
     property bool selected: false
 
     function reset() {
