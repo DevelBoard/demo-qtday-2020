@@ -10,7 +10,7 @@ DPage {
 
     function reset() {
         slidersGroup.breakBindings();
-        work_0.value = work_1.value = work_2.value = 0.5;
+        workCoding.value = workSwDesign.value = workGaming.value = 0.5;
         selected = false;
         slidersGroup.restoreBindings();
     }
@@ -21,14 +21,14 @@ DPage {
         y: 132
 
         readonly property double updateTriggerThreshold: 0.000001
-        property double functionalTotal: work_0.functionalValue + work_1.functionalValue + work_2.functionalValue
+        property double functionalTotal: workCoding.functionalValue + workSwDesign.functionalValue + workGaming.functionalValue
         property double functionalDelta: functionalTotal - 1.0
         property bool shouldAdjust: Math.abs(functionalDelta) > updateTriggerThreshold
         property int lastSliderMovedIndex: -1
 
-        DelegateWork { id: work_0; text: qsTr("Coding\nthousands of rows..."); color: "#FF29FF"; lightcolor: "#66FF29FF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 0; } }
-        DelegateWork { id: work_1; text: qsTr("Software design"); color: "#29FFEF"; lightcolor: "#6629FFEF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 1; } }
-        DelegateWork { id: work_2; text: qsTr("Just gaming!"); color: "#A4FF29"; lightcolor: "#66A4FF29"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 2; } }
+        DelegateWork { id: workCoding; text: qsTr("Coding\nthousands of rows..."); color: "#FF29FF"; lightcolor: "#66FF29FF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 0; } }
+        DelegateWork { id: workSwDesign; text: qsTr("Software design"); color: "#29FFEF"; lightcolor: "#6629FFEF"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 1; } }
+        DelegateWork { id: workGaming; text: qsTr("Just gaming!"); color: "#A4FF29"; lightcolor: "#66A4FF29"; onValueChanged: { root.selected = true; slidersGroup.lastSliderMovedIndex = 2; } }
 
         function breakBindings() {
             functionalTotal = functionalTotal;
@@ -36,7 +36,7 @@ DPage {
             shouldAdjust = shouldAdjust;
         }
         function restoreBindings() {
-            functionalTotal = Qt.binding(function() { return work_0.functionalValue + work_1.functionalValue + work_2.functionalValue; })
+            functionalTotal = Qt.binding(function() { return workCoding.functionalValue + workSwDesign.functionalValue + workGaming.functionalValue; })
             functionalDelta = Qt.binding(function() { return functionalTotal - 1.0; })
             shouldAdjust = Qt.binding(function() { return Math.abs(functionalDelta) > updateTriggerThreshold; })
         }
@@ -79,23 +79,23 @@ DPage {
 
             DWorkActivityShapePath {
                 id: shapePath_0
-                end: work_0.functionalValue
-                strokeColor: work_0.color
+                end: workCoding.functionalValue
+                strokeColor: workCoding.color
                 strokeWidth: chart.strokeWidth
                 radius: chart.width / 2
             }
             DWorkActivityShapePath {
                 id: shapePath_1
                 start: shapePath_0.end
-                end: start + work_1.functionalValue
-                strokeColor: work_1.color
+                end: start + workSwDesign.functionalValue
+                strokeColor: workSwDesign.color
                 strokeWidth: chart.strokeWidth
                 radius: chart.width / 2
             }
             DWorkActivityShapePath {
                 id: shapePath_2
                 start: shapePath_1.end
-                strokeColor: work_2.color
+                strokeColor: workGaming.color
                 strokeWidth: chart.strokeWidth
                 radius: chart.width / 2
             }
