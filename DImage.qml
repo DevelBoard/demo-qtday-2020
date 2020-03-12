@@ -11,6 +11,6 @@ Image {
             State { when: root.source === image.source; PropertyChanges { target: image; opacity: 1.0; } },
             State { when: root.source !== image.source; PropertyChanges { target: image; opacity: 0.0; } }
         ]
-        transitions: Transition { OpacityAnimator { target: root } }
+        transitions: Transition { OpacityAnimator { target: root; duration: 200; easing.type: Easing.InQuad } }
     }
 }
