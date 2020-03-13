@@ -11,21 +11,6 @@ ApplicationWindow {
     title: qsTr("Demo QtDay 2020")
     background: Image { source: "assets/develboard_bg-1.png" }
 
-    function saveUserExperience() {
-        var db = LocalStorage.openDatabaseSync("QtDay2020_DB", "1.0", "A collection of all the entries collected during QtDay 2020.");
-        db.transaction(function(tx) {
-                // Create the database table if it doesn't already exist
-                tx.executeSql('CREATE TABLE IF NOT EXISTS UserExperiences(id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp DATETIME DEFAULT (datetime(\'now\',\'localtime\')), name TEXT, mail TEXT, role TEXT, city TEXT, transport TEXT, work_distance INTEGER, bycicle BOOLEAN, crossfit BOOLEAN, gym BOOLEAN, running BOOLEAN, soccer BOOLEAN, surf BOOLEAN, swimming BOOLEAN, tennis BOOLEAN, coding INTEGER, sw_design INTEGER, gaming INTEGER)');
-                // Add an entry
-                tx.executeSql('INSERT INTO UserExperiences(name, mail, role, city, transport, work_distance, bycicle, crossfit, gym, running, soccer, surf, swimming, tennis, coding, sw_design, gaming) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [ pageName.name, pageMail.mail, pageRoles.role, pageCities.city, pageTransports.transport, pageTransports.distance, pageSports.bycicleSelected, pageSports.crossfitSelected, pageSports.gymSelected, pageSports.runningSelected, pageSports.soccerSelected, pageSports.surfSelected, pageSports.swimmingSelected, pageSports.tennisSelected, pageWork.coding, pageWork.swDesign, pageWork.gaming ]);
-                // Show all added entries
-                var rs = tx.executeSql('SELECT * FROM UserExperiences');
-                for (var i = 0; i < rs.rows.length; i++)
-                    console.log(JSON.stringify(rs.rows.item(i)))
-            }
-        )
-    }
-
     FontLoader {
         id: mediumFont
         source: "assets/fonts/medium.otf"
@@ -46,8 +31,28 @@ ApplicationWindow {
         readonly property DPage currentPage: children[layout.currentIndex]
         property int nextIndex: 0
 
+        property date beginningTimestamp
+        property bool isExperienceFinished: false
+
+        function saveUserExperience() {
+            var db = LocalStorage.openDatabaseSync("QtDay2020_DB", "1.0", "A collection of all the entries collected during QtDay 2020.");
+            db.transaction(function(tx) {
+                    // Create the database table if it doesn't already exist
+                    tx.executeSql('CREATE TABLE IF NOT EXISTS UserExperiences(id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp_start DATETIME, timestamp_end DATETIME, finished BOOLEAN, name TEXT, mail TEXT, role TEXT, city TEXT, transport TEXT, work_distance INTEGER, bycicle BOOLEAN, crossfit BOOLEAN, gym BOOLEAN, running BOOLEAN, soccer BOOLEAN, surf BOOLEAN, swimming BOOLEAN, tennis BOOLEAN, coding INTEGER, sw_design INTEGER, gaming INTEGER)');
+                    // Add an entry
+                    tx.executeSql('INSERT INTO UserExperiences(timestamp_start, timestamp_end, finished, name, mail, role, city, transport, work_distance, bycicle, crossfit, gym, running, soccer, surf, swimming, tennis, coding, sw_design, gaming) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [ beginningTimestamp, new Date(), isExperienceFinished, pageName.name, pageMail.mail, pageRoles.role, pageCities.city, pageTransports.transport, pageTransports.distance, pageSports.bycicleSelected, pageSports.crossfitSelected, pageSports.gymSelected, pageSports.runningSelected, pageSports.soccerSelected, pageSports.surfSelected, pageSports.swimmingSelected, pageSports.tennisSelected, pageWork.coding, pageWork.swDesign, pageWork.gaming ]);
+                    // Show all added entries
+                    var rs = tx.executeSql('SELECT * FROM UserExperiences');
+                    for (var i = 0; i < rs.rows.length; i++)
+                        console.log(JSON.stringify(rs.rows.item(i)))
+                }
+            )
+        }
+
         function reset() {
-            layout.nextIndex = 0;
+            saveUserExperience();
+            nextIndex = 0;
+            isExperienceFinished = false;
             pageRoles.reset();
             pageName.reset();
             pageMail.reset();
@@ -57,7 +62,7 @@ ApplicationWindow {
             pageWork.reset();
         }
 
-        PageStart { id: pageStart; }
+        PageStart { id: pageStart; onNextPageRequested: { layout.beginningTimestamp = new Date(); }}
         PageRoles { id: pageRoles; backButtonRequired: false; }
         PageName { id: pageName; }
         PageMail { id: pageMail; }
@@ -72,7 +77,7 @@ ApplicationWindow {
         PageWork { id: pageWork; backButtonRequired: false; }
         PageLoad { id: pageLoad_3; }
 
-        PageFinal { id: pageFinal; }
+        PageFinal { id: pageFinal; onNextPageRequested: { layout.isExperienceFinished = true; layout.reset(); } }
 
         states: [
             State { when: layout.nextIndex === layout.currentIndex; PropertyChanges { target: layout; opacity: 1.0; } },
@@ -120,13 +125,7 @@ ApplicationWindow {
 //  ---- Connections
     Connections {
         target: layout.currentPage
-        onNextPageRequested: {
-            layout.nextIndex = (layout.currentIndex + 1) % layout.count;
-            if (layout.nextIndex === 0) {
-                window.saveUserExperience();
-                layout.reset();
-            }
-        }
+        onNextPageRequested: { layout.nextIndex = (layout.currentIndex + 1) % layout.count; }
         onPopupRequested: {
             if (layout.currentIndex !== 0 && layout.currentIndex !== layout.count - 1)
                 resetPopup.open();
