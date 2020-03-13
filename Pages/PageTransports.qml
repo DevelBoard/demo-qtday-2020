@@ -29,7 +29,7 @@ DPage {
         }
         model: ListModel {
             id: transportsModel
-            ListElement { transport: QT_TR_NOOP("Bycicle") }
+            ListElement { transport: QT_TR_NOOP("Bicycle") }
             ListElement { transport: QT_TR_NOOP("Bus") }
             ListElement { transport: QT_TR_NOOP("Car") }
             ListElement { transport: QT_TR_NOOP("On foot") }
