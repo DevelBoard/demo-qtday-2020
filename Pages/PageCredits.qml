@@ -20,7 +20,7 @@ Image {
     Flickable {
         id: flickable
         width: 624
-        height: 380
+        height: Math.min(creditsContent.height, 380)
         y: 80
         anchors.horizontalCenter: parent.horizontalCenter
         contentWidth: creditsContent.width
