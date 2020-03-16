@@ -33,12 +33,15 @@ ApplicationWindow {
 
         property date beginningTimestamp
         property bool isExperienceFinished: false
+        readonly property var db: LocalStorage.openDatabaseSync("QtDay2020_DB", "1.0", "A collection of all the entries collected during QtDay 2020.")
+
+        Component.onCompleted: layout.db.transaction(function(tx) {
+            // Create the database table if it doesn't already exist
+            tx.executeSql('CREATE TABLE IF NOT EXISTS UserExperiences(id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp_start DATETIME, timestamp_end DATETIME, finished BOOLEAN, name TEXT, mail TEXT, role TEXT, city TEXT, transport TEXT, work_distance INTEGER, bycicle BOOLEAN, crossfit BOOLEAN, gym BOOLEAN, running BOOLEAN, soccer BOOLEAN, surf BOOLEAN, swimming BOOLEAN, tennis BOOLEAN, coding INTEGER, sw_design INTEGER, gaming INTEGER)');
+        })
 
         function saveUserExperience() {
-            var db = LocalStorage.openDatabaseSync("QtDay2020_DB", "1.0", "A collection of all the entries collected during QtDay 2020.");
-            db.transaction(function(tx) {
-                    // Create the database table if it doesn't already exist
-                    tx.executeSql('CREATE TABLE IF NOT EXISTS UserExperiences(id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp_start DATETIME, timestamp_end DATETIME, finished BOOLEAN, name TEXT, mail TEXT, role TEXT, city TEXT, transport TEXT, work_distance INTEGER, bycicle BOOLEAN, crossfit BOOLEAN, gym BOOLEAN, running BOOLEAN, soccer BOOLEAN, surf BOOLEAN, swimming BOOLEAN, tennis BOOLEAN, coding INTEGER, sw_design INTEGER, gaming INTEGER)');
+            layout.db.transaction(function(tx) {
                     // Add an entry
                     tx.executeSql('INSERT INTO UserExperiences(timestamp_start, timestamp_end, finished, name, mail, role, city, transport, work_distance, bycicle, crossfit, gym, running, soccer, surf, swimming, tennis, coding, sw_design, gaming) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [ beginningTimestamp, new Date(), isExperienceFinished, pageName.name, pageMail.mail, pageRoles.role, pageCities.city, pageTransports.transport, pageTransports.distance, pageSports.bycicleSelected, pageSports.crossfitSelected, pageSports.gymSelected, pageSports.runningSelected, pageSports.soccerSelected, pageSports.surfSelected, pageSports.swimmingSelected, pageSports.tennisSelected, pageWork.coding, pageWork.swDesign, pageWork.gaming ]);
                     // Show all added entries
