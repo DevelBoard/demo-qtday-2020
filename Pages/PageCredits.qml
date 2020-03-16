@@ -56,6 +56,7 @@ Image {
                 color: Colors.white
                 horizontalAlignment: Text.AlignLeft
             }
+            Rectangle { height: 40; width: parent.width; color: "transparent" }
             Image {
                 anchors.horizontalCenter: parent.horizontalCenter
                 source: "assets/ic_develer.png"
