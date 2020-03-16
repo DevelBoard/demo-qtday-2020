@@ -3,7 +3,7 @@ import QtQuick.Shapes 1.12
 
 DPage {
     id: root
-    subtitle: qsTr("Mix the subjects of your standard work day!")
+    subtitle: qsTr("Mix the activities of your standard work day!")
     button: ButtonNext { id: next; enabled: root.selected; onClicked: root.nextPageRequested(); }
 
     readonly property int coding: workCoding.value * 100

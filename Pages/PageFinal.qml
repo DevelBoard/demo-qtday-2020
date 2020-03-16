@@ -3,7 +3,7 @@ import QtQuick 2.12
 DPage {
     id: root
     backButtonRequired: false
-    textContent: qsTr("Check out your mail box\nand get your own Qt playlist in Spotify!\n")
+    textContent: qsTr("Check out your mail box\nand get your own Qt playlist on Spotify!\n")
     button: ButtonThanks { id: thanks; y: -56; onClicked: root.nextPageRequested(); }
 
     DText {

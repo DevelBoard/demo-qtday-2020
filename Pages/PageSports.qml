@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 DPage {
     id: root
-    subtitle: qsTr("What do you do in your free time?")
+    subtitle: qsTr("What do you do in your spare time?")
     button: ButtonNext { id: next; enabled: root.selected; onClicked: root.nextPageRequested(); }
 
     property alias bycicleSelected: bycicle.selected

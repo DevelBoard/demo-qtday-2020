@@ -3,7 +3,7 @@ import QtQuick 2.12
 DPage {
     id: root
     button: ButtonStart { onClicked: root.nextPageRequested() }
-    textContent: qsTr("Cities, sports and urban activity!\nDescribe yourself and get your own Qt sound!")
+    textContent: qsTr("Cities, sports and means of transport …\n\nTell us your daily activities\nand get your own Qt playlist!")
 
     property alias textStep_1: step_1.text
     property alias textStep_2: step_2.text

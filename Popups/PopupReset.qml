@@ -15,12 +15,13 @@ Popup {
     }
     contentItem: Image {
         source: "assets/pop-up/bg_pop-up.png"
-        DText {
+        DTextThin {
             width: 378
             y: 28
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 18
-            text: "Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia"
+            font.pixelSize: 22
+            lineHeight: 1.1
+            text: "Are you sure you want to reset\nyour Qt Music experience?\nYou'll lose all the entered data."
         }
         Row {
             anchors.horizontalCenter: parent.horizontalCenter

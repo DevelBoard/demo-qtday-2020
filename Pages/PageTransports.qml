@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 DPage {
     id: root
-    subtitle: qsTr("Your way to move in a work day?")
+    subtitle: qsTr("Describe your way to move in your typical day")
     button: ButtonNext { id: next; enabled: Boolean(transport) && selectedDistance; onClicked: root.nextPageRequested(); }
 
     property bool selectedDistance: false

@@ -3,7 +3,7 @@ import QtQuick 2.12
 DPage {
     id: root
 
-    subtitle: qsTr("Your ideal capital city you would live in?");
+    subtitle: qsTr("Select your favorite world capital");
     button: ButtonNext { id: next; enabled: Boolean(city); onClicked: root.nextPageRequested(); }
 
     property string city: ""
