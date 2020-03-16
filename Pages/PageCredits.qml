@@ -39,15 +39,22 @@ Image {
             bottomPadding: topPadding
             leftPadding: 24
             rightPadding: 56
-            spacing: 40
-            Text {
-                id: creditsText
+            spacing: 16
+            DText {
+                text: "Cities icons"
+                font.pixelSize: 16
+                font.capitalization: Font.AllUppercase
+                color: Colors.lightgrey
+                horizontalAlignment: Text.AlignLeft
+            }
+            DText {
                 width: 544
-                text: "Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
-                font.pixelSize: 20
-                font.family: "Helvetica"
+                text: "© Copyright by Agente Studio Minsk, Krasnozvezdnaya street - 18B, room 611\nMinsk 220034 Belarus\n\nhttps://creativecommons.org/licenses/by/4.0/legalcode"
+                font.pixelSize: 14
+                lineHeight: 1.5
                 wrapMode: Text.Wrap
                 color: Colors.white
+                horizontalAlignment: Text.AlignLeft
             }
             Image {
                 anchors.horizontalCenter: parent.horizontalCenter
