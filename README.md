@@ -10,6 +10,9 @@ We are also the organizers of the [QtDay 2020](https://www.qtday.it/) conference
 
 ## <a href="https://www.develer.com/en/products/develboard-blue-system-on-module-cortex-a5-linux/"><img src="assets/ic_develboard.png" height="24" alt="DevelBoard"></a>
 DevelBoard is a Linux SoM, with unique BSP and software addons.
+</br>
 <a href="https://www.develer.com/en/products/develboard-blue-system-on-module-cortex-a5-linux/"><img src="https://www.develer.com/wp-content/uploads/2020/03/DevelBoard-Blue.jpg" height="200" alt="DevelBoard Blue SoM"></a>
+</br>
 It has a very small form factor, extended temperature range, low power requirements, and a custom BSP with advanced tools, made and maintained by true Linux experts.
+</br>
 <a href="https://www.develer.com/en/products/develboard-blue-system-on-module-cortex-a5-linux/"><img src="https://www.develboard.com/img/develboard/eva01-r2-2.png" height="200" alt="DevelBoard based board"></a>
