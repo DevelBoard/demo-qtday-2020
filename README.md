@@ -8,9 +8,9 @@ We partner with your company to create exceptional products, building software a
 </br>
 We are the company behind the development of this demo and the DevelBoard-based embedded device shown at QtDay 2020 during the talk
 </br>
-*Design thinking: why you should always include UX processes in your work - Matteo Forni and Tommaso Bonvicini*.
+<i>Design thinking: why you should always include UX processes in your work - Matteo Forni and Tommaso Bonvicini</i>
 </br>
-We are also the organizers of the https://www.qtday.it conference.
+We are also the organizers of the <a href="https://www.qtday.it">QtDay 2020</a> conference.
 
 ## <a href="https://www.develer.com/en/products/develboard-blue-system-on-module-cortex-a5-linux/"><img src="assets/ic_develboard.png" height="24" alt="DevelBoard"></a>
 DevelBoard is a Linux SoM, with unique BSP and software addons.
