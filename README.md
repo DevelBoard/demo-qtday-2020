@@ -6,7 +6,7 @@ Welcome to the repository hosting the code used to build the [Qt 5.12.3](https:/
 </a>
 We partner with your company to create exceptional products, building software and hardware with diligence and passion.</br>
 We are the company behind the development of this demo and the DevelBoard-based embedded device shown at QtDay 2020 during the talk `Design thinking: why you should always include UX processes in your work - Matteo Forni and Tommaso Bonvicini`.</br>
-We are also the organizers of the [QtDay 2020](https://www.qtday.it/) conference.
+We are also the organizers of the [QtDay 2020](https://www.qtday.it) conference.
 
 ## <a href="https://www.develer.com/en/products/develboard-blue-system-on-module-cortex-a5-linux/"><img src="assets/ic_develboard.png" height="24" alt="DevelBoard"></a>
 DevelBoard is a Linux SoM, with unique BSP and software addons.
