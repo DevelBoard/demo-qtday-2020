@@ -4,8 +4,12 @@ Welcome to the repository hosting the code used to build the [Qt 5.12.3](https:/
 <img src="https://user-images.githubusercontent.com/26225010/76514866-d912a980-6458-11ea-9eb1-0798c84cbf6f.png" height="400">
 ## <a href="https://www.develer.com/"><img src="assets/ic_develer_dark.png" height="26" alt="Develer">
 </a>
-We partner with your company to create exceptional products, building software and hardware with diligence and passion.</br>
-We are the company behind the development of this demo and the DevelBoard-based embedded device shown at QtDay 2020 during the talk `Design thinking: why you should always include UX processes in your work - Matteo Forni and Tommaso Bonvicini`.</br>
+We partner with your company to create exceptional products, building software and hardware with diligence and passion.
+</br>
+We are the company behind the development of this demo and the DevelBoard-based embedded device shown at QtDay 2020 during the talk
+</br>
+*Design thinking: why you should always include UX processes in your work - Matteo Forni and Tommaso Bonvicini*.
+</br>
 We are also the organizers of the https://www.qtday.it conference.
 
 ## <a href="https://www.develer.com/en/products/develboard-blue-system-on-module-cortex-a5-linux/"><img src="assets/ic_develboard.png" height="24" alt="DevelBoard"></a>
